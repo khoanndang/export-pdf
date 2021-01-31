@@ -1,0 +1,11 @@
+plugin:
+    name: 'khoa.warehouse::lang.plugin.name'
+    description: 'khoa.warehouse::lang.plugin.description'
+    author: Khoa
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Xuất nhập kho'
+        url: khoa/warehouse/warehouse
+        icon: icon-book

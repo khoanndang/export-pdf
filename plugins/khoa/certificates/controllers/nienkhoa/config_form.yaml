@@ -1,0 +1,10 @@
+name: Nienkhoa
+form: $/khoa/certificates/models/nienkhoa/fields.yaml
+modelClass: Khoa\Certificates\Models\Nienkhoa
+defaultRedirect: khoa/certificates/nienkhoa
+create:
+    redirect: 'khoa/certificates/nienkhoa/update/:id'
+    redirectClose: khoa/certificates/nienkhoa
+update:
+    redirect: khoa/certificates/nienkhoa
+    redirectClose: khoa/certificates/nienkhoa

@@ -1,0 +1,12 @@
+columns:
+    id:
+        label: '#'
+        type: number
+        sortable: true
+    ma_kho:
+        label: 'Mã kho'
+        type: text
+    full_name:
+        label: 'Họ tên người giao'
+        type: text
+        searchable: true

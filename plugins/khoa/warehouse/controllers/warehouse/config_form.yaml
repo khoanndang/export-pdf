@@ -1,0 +1,10 @@
+name: Warehouse
+form: $/khoa/warehouse/models/warehouse/fields.yaml
+modelClass: Khoa\Warehouse\Models\Warehouse
+defaultRedirect: khoa/warehouse/warehouse
+create:
+    redirect: 'khoa/warehouse/warehouse/update/:id'
+    redirectClose: khoa/warehouse/warehouse
+update:
+    redirect: khoa/warehouse/warehouse
+    redirectClose: khoa/warehouse/warehouse

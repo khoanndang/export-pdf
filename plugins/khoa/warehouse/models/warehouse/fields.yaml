@@ -1,0 +1,92 @@
+tabs:
+    fields:
+        ma_kho:
+            label: 'Mã kho'
+            span: auto
+            type: text
+            tab: 'Thông tin chung'
+        type:
+            label: 'Loại hình'
+            options:
+                - Xuất
+                - Nhập
+            showSearch: true
+            span: auto
+            type: dropdown
+            tab: 'Thông tin chung'
+        full_name:
+            label: 'Họ và tên người giao'
+            span: auto
+            type: text
+            tab: 'Thông tin chung'
+        theo:
+            label: Theo
+            span: auto
+            type: text
+            tab: 'Thông tin chung'
+        ngay:
+            label: 'Ngày'
+            span: auto
+            type: text
+            tab: 'Thông tin chung'
+        thang:
+            label: Tháng
+            span: auto
+            type: text
+            tab: 'Thông tin chung'
+        nam:
+            label: Năm
+            span: auto
+            type: text
+            tab: 'Thông tin chung'
+        cua:
+            label: Của
+            span: auto
+            type: text
+            tab: 'Thông tin chung'
+        nhap_tai_kho:
+            label: 'Nhập tại kho'
+            span: auto
+            type: text
+            tab: 'Thông tin chung'
+        dia_diem:
+            label: 'Địa điểm'
+            span: auto
+            type: text
+            tab: 'Thông tin chung'
+        json_data:
+            label: 'Thông tin xuất nhập'
+            prompt: 'Add new item'
+            span: full
+            type: repeater
+            tab: 'Thông tin xuất nhập'
+            form:
+                fields:
+                    name_field:
+                        label: 'Tên, nhãn hiệu, quy cách, phẩm chất vật tư, dụng cụ sản phẩm, hàng hóa'
+                        span: auto
+                        type: text
+                    ma_so:
+                        label: 'Mã số'
+                        span: auto
+                        type: text
+                    don_vi_tinh:
+                        label: 'Đơn vị tính'
+                        span: auto
+                        type: text
+                    theo_chung_tu:
+                        label: 'Theo chứng từ'
+                        span: auto
+                        type: text
+                    thuc_nhap:
+                        label: 'Thực nhập'
+                        span: auto
+                        type: text
+                    don_gia:
+                        label: 'Đơn giá'
+                        span: auto
+                        type: text
+                    thanh_tien:
+                        label: 'Thành tiền'
+                        span: auto
+                        type: text

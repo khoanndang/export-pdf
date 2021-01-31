@@ -1,0 +1,10 @@
+name: Student
+form: $/khoa/certificates/models/student/fields.yaml
+modelClass: Khoa\Certificates\Models\Student
+defaultRedirect: khoa/certificates/student
+create:
+    redirect: 'khoa/certificates/student/update/:id'
+    redirectClose: khoa/certificates/student
+update:
+    redirect: khoa/certificates/student
+    redirectClose: khoa/certificates/student

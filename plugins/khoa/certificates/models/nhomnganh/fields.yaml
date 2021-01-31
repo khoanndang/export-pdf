@@ -1,0 +1,31 @@
+fields:
+    name:
+        label: 'Tên nhóm ngành'
+        span: full
+        required: 1
+        type: text
+    nghiep_vu:
+        label: 'Nghiệp vụ'
+        span: auto
+        placeholder: 'Nhập số giờ'
+        type: text
+    ngoai_ngu:
+        label: 'Ngoại ngữ'
+        span: auto
+        placeholder: 'Nhập số giờ'
+        type: text
+    kien_thuc:
+        label: 'Kiến thức'
+        span: auto
+        placeholder: 'Nhập số giờ'
+        type: text
+    nienkhoa:
+        label: 'Niên khóa'
+        span: auto
+        nameFrom: name
+        mode: relation
+        separator: comma
+        customTags: true
+        useKey: false
+        required: 1
+        type: taglist

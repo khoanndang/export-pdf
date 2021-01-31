@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table khoa_certificates_nhom_nganh'
+    - builder_table_create_khoa_certificates_nhom_nganh.php
+1.0.3:
+    - 'Created table khoa_certificates_nien_khoa'
+    - builder_table_create_khoa_certificates_nien_khoa.php
+1.0.4:
+    - 'Created table khoa_certificates_nhom_nganh_nien_khoa'
+    - builder_table_create_khoa_certificates_nhom_nganh_nien_khoa.php
+1.0.5:
+    - 'Created table khoa_certificates_student'
+    - builder_table_create_khoa_certificates_student.php

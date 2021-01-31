@@ -1,0 +1,24 @@
+plugin:
+    name: 'khoa.certificates::lang.plugin.name'
+    description: 'khoa.certificates::lang.plugin.description'
+    author: Khoa
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Niên khóa / Nhóm ngành'
+        url: khoa/certificates/nienkhoa
+        icon: icon-life-ring
+        sideMenu:
+            side-menu-item:
+                label: 'Niên Khóa'
+                url: khoa/certificates/nienkhoa
+                icon: icon-sitemap
+            side-menu-item2:
+                label: 'Nhóm ngành'
+                url: khoa/certificates/nhomnganh
+                icon: icon-sitemap
+    main-menu-item2:
+        label: 'Thực tập sinh'
+        url: khoa/certificates/student
+        icon: icon-user

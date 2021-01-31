@@ -1,0 +1,18 @@
+fields:
+    name:
+        label: 'Tên niên khóa'
+        span: full
+        placeholder: 'Nhập tên niên khóa'
+        type: text
+    start:
+        label: 'Bắt đầu vào'
+        mode: date
+        span: auto
+        type: datepicker
+        format: d/m/Y
+    end:
+        label: 'Kết thúc vào'
+        mode: date
+        span: auto
+        type: datepicker
+        format: d/m/Y

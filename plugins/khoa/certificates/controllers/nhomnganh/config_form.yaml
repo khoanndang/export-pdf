@@ -1,0 +1,10 @@
+name: Nhomnganh
+form: $/khoa/certificates/models/nhomnganh/fields.yaml
+modelClass: Khoa\Certificates\Models\Nhomnganh
+defaultRedirect: khoa/certificates/nhomnganh
+create:
+    redirect: 'khoa/certificates/nhomnganh/update/:id'
+    redirectClose: khoa/certificates/nhomnganh
+update:
+    redirect: khoa/certificates/nhomnganh
+    redirectClose: khoa/certificates/nhomnganh

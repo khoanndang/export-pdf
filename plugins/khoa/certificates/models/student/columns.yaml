@@ -1,0 +1,26 @@
+columns:
+    id:
+        label: '#'
+        type: number
+        sortable: true
+    ho_ten:
+        label: 'Họ tên'
+        type: text
+        searchable: true
+    cmnd:
+        label: CMND
+        type: text
+    noi_sinh:
+        label: 'Nơi sinh'
+        type: text
+        searchable: true
+    nienkhoa:
+        label: 'Niên khóa'
+        type: partial
+        searchable: false
+        path: $/khoa/certificates/models/student/_nienkhoa.htm
+    nhomnganh:
+        label: 'Nhóm ngành'
+        type: partial
+        searchable: false
+        path: $/khoa/certificates/models/student/_nhomnganh.htm

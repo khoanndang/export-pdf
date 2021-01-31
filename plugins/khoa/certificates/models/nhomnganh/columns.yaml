@@ -1,0 +1,14 @@
+columns:
+    name:
+        label: 'Tên nhóm ngành'
+        type: text
+        searchable: true
+    nghiep_vu:
+        label: 'Nghiệp vụ (giờ)'
+        type: text
+    ngoai_ngu:
+        label: 'Ngoại ngữ (giờ)'
+        type: text
+    kien_thuc:
+        label: 'Kiến thức (giờ)'
+        type: text

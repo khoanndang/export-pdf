@@ -1,0 +1,15 @@
+scopes:
+  nienkhoa:
+    label: Niên khóa
+    type: group
+    conditions: nienkhoa_id in (:filtered)
+    modelClass: Khoa\Certificates\Models\Student
+    options: getNienkhoaOptions
+
+  nhomnganh:
+      label: Nhóm ngành
+      type: group
+      conditions: nhomnganh_id in (:filtered)
+      modelClass: Khoa\Certificates\Models\Student
+      options: getNhomnganhOptions
+      dependsOn: nienkhoa

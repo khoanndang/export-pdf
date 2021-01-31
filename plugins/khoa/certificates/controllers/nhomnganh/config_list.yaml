@@ -1,0 +1,12 @@
+list: $/khoa/certificates/models/nhomnganh/columns.yaml
+modelClass: Khoa\Certificates\Models\Nhomnganh
+title: Nhomnganh
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'khoa/certificates/nhomnganh/update/:id'
