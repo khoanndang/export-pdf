@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charshet="utf-8" />
+
+</head>
+<style>
+    body {
+        font-size: 16px;
+        margin: 0;
+        overflow-x: hidden;
+        margin-top: -40px;
+        margin-bottom: -40px;
+
+    }
+
+    .table-cer {
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    .background {
+        background-image: url('plugins/renatio/dynamicpdf/assets/background.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding-top: 10px;
+    }
+
+    table {
+        width: 100%;
+
+    }
+
+    strong {
+        margin-left: 0;
+    }
+
+    h2 {
+        font-size: 26px;
+        margin: 0;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin: 0;
+        font-style: oblique;
+        font-weight: normal;
+    }
+
+    .red {
+        color: #f15b45;
+    }
+
+    .left-info {
+        width: 30%;
+    }
+
+    .sign {
+        margin-bottom: 40px;
+    }
+
+    .sign {
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .sign-1 td {
+
+        width: 33%;
+    }
+
+    .sign-2 td {
+        width: 20%;
+    }
+
+    .fill-info {
+        color: #f15b45;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    table.list {
+        border-collapse: collapse;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .list thead {
+        border: 1px solid;
+        border-spacing: 0;
+
+    }
+
+    .list th {
+        border: 1px solid;
+        border-spacing: 0;
+
+    }
+
+    .list tr {
+        border-spacing: 0;
+    }
+
+    .list td {
+        border: 1px solid;
+        border-spacing: 0;
+    }
+</style>
+
+<body>
+    <!-- Phiếu xuất kho -->
+    <div class="table-cer">
+        <table class="logo">
+            <tr>
+                <td><img src="plugins/renatio/dynamicpdf/assets/logo.png" width="150px">
+                    <p>406/61 Cộng Hòa, Phường 13, Quận Tân Bình,<br>TP.HCM, Việt Nam</p>
+                </td>
+                <td style="text-align:center;width:50%;">
+                    <p style="font-weight:bold;margin-top:-40px;">Mẫu số : 02 - VT</p>
+                    <p style="font-size:12px;">(Ban hành theo Thông tư số 200/2014/TT-BTC <br>Ngày 22/12/2014 của Bộ Tài
+                        chính )</p>
+                </td>
+            </tr>
+        </table>
+        <div class="content" style="text-align: center;">
+            <h2>PHIẾU XUẤT KHO</h2>
+            <h3>Ngày <span class="red">17</span> tháng <span class="red">9</span> năm <span class="red">2020</span></h3>
+            <h3>Số : <span class="red">PNSTR2T0101</span></h3>
+        </div>
+        <div class="background">
+            <table class="information">
+                <tr>
+                    <td colspan="1" class="left-info">- Họ và tên người nhận</td>
+                    <td colspan="4" class="fill-info">
+                        <span>: Hoàng thị huyền</span>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="1" class="left-info">- Địa chỉ (bộ phận)</td>
+                    <td colspan="4" class="fill-info">
+                        <span>: Hoàng thị huyền</span>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="1" class="left-info">- Lý do xuất kho </td>
+                    <td colspan="4" class="fill-info">
+                        <span>: Hoàng thị huyền</span>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="1" class="left-info">- Xuất tại kho (ngăn lô)</td>
+                    <td colspan="2" class="fill-info"><span>: Hoàng thị huyền</span></td>
+                    <td colspan="3" class="fill-info"><span style="color:black;">- Địa chỉ :</span><span>Hoàng thị
+                            huyền</span></td>
+                </tr>
+            </table>
+            <table class="list">
+                <thead>
+                    <tr>
+                        <th rowspan="2">STT</th>
+                        <th rowspan="2">Tên, nhãn hiệu, quy cách, phẩm <br> chất vật tư, dụng cụ sản phẩm, hàng hóa</th>
+                        <th rowspan="2">Mã số</th>
+                        <th rowspan="2">Ðơn vị tính</th>
+                        <th colspan="2">Số lượng</th>
+                        <th rowspan="2">Đơn giá</th>
+                        <th rowspan="2">Thành tiền</th>
+
+                    </tr>
+                    <tr>
+                        <th>Theo chứng từ</th>
+                        <th>Thực nhập</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>D</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <!-- Vòng lặp sản phẩm -->
+                    <tr>
+                        <td>1</td>
+                        <td> Gỗ thành phẩm ACACI A loại 1 28X39 TR28391 m3</td>
+                        <td>TR28391</td>
+                        <td>m3</td>
+                        <td>1,092</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>4</td>
+                    </tr>
+                    <!-- END Vòng lặp sản phẩm -->
+                </tbody>
+            </table>
+            <table class="information">
+                <tr>
+                    <td style="width:40%;">- Tổng số tiền ( Viết bằng chữ ):</td>
+                    <td class="fill-info">
+                        <span>: Hoàng thị huyền</span>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:40%;">- Số chứng từ gốc kèm theo:</td>
+                    <td class="fill-info">
+                        <span>: Hoàng thị huyền</span>
+
+                    </td>
+                </tr>
+            </table>
+            <table class="sign">
+                <tr class="sign-1">
+                    <td></td>
+                    <td></td>
+                    <td colspan="3" style="text-align:right;">Ngày <span class="red">17</span> tháng <span
+                            class="red">9</span> năm <span class="red">2020</span></td>
+                </tr>
+                <tr class="sign-2">
+                    <td><strong>Người lập phiếu</strong><br>( ký, họ tên)</td>
+                    <td><strong>Người nhận hàng</strong><br>( ký, họ tên)</td>
+                    <td><strong>Thủ kho</strong><br>( ký, họ tên)</td>
+                    <td><strong>Kế toán</strong><br>( ký, họ tên)</td>
+                    <td><strong>Giám đốc</strong><br>( ký, họ tên)</td>
+
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+    <!-- Phiếu xuất kho -->
+
+    <!-- Phiếu nhập kho -->
+    <div class="table-cer">
+        <table class="logo">
+            <tr>
+                <td><img src="plugins/renatio/dynamicpdf/assets/logo.png" width="150px">
+                    <p>406/61 Cộng Hòa, Phường 13, Quận Tân Bình,<br>TP.HCM, Việt Nam</p>
+                </td>
+                <td style="text-align:center;width:50%;">
+                    <p style="font-weight:bold;margin-top:-40px;">Mẫu số : 01 - VT</p>
+                    <p style="font-size:12px;">(Ban hành theo Thông tư số 200/2014/TT-BTC <br>Ngày 22/12/2014 của Bộ Tài
+                        chính )</p>
+                </td>
+            </tr>
+        </table>
+        <div class="content" style="text-align: center;">
+            <h2>PHIẾU XUẤT KHO</h2>
+            <h3>Ngày <span class="red">17</span> tháng <span class="red">9</span> năm <span class="red">2020</span></h3>
+            <h3>Số : <span class="red">PNSTR2T0101</span></h3>
+        </div>
+        <div class="background">
+            <table class="information">
+                <tr>
+                    <td colspan="1" class="left-info">- Họ tên người giao</td>
+                    <td colspan="4" class="fill-info">
+                        <span>: Hoàng thị huyền</span>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="left-info">- Theo .................. ngày..................tháng................năm .......... của.................................................... </td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="1" class="left-info">- Lý do xuất kho </td>
+                    <td colspan="4" class="fill-info">
+                        <span>: Hoàng thị huyền</span>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="1" class="left-info">-Nhập tại kho</td>
+                    <td colspan="2" class="fill-info"><span>: Hoàng thị huyền</span></td>
+                    <td colspan="3" class="fill-info"><span style="color:black;">- Địa điểm :</span><span>Hoàng thị
+                            huyền</span></td>
+                </tr>
+            </table>
+            <table class="list">
+                <thead>
+                    <tr>
+                        <th rowspan="2">STT</th>
+                        <th rowspan="2">Tên, nhãn hiệu, quy cách, phẩm <br> chất vật tư, dụng cụ sản phẩm, hàng hóa</th>
+                        <th rowspan="2">Mã số</th>
+                        <th rowspan="2">Ðơn vị tính</th>
+                        <th colspan="2">Số lượng</th>
+                        <th rowspan="2">Đơn giá</th>
+                        <th rowspan="2">Thành tiền</th>
+
+                    </tr>
+                    <tr>
+                        <th>Theo chứng từ</th>
+                        <th>Thực nhập</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>D</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <!-- Vòng lặp sản phẩm -->
+                    <tr>
+                        <td>1</td>
+                        <td> Gỗ thành phẩm ACACI A loại 1 28X39 TR28391 m3</td>
+                        <td>TR28391</td>
+                        <td>m3</td>
+                        <td>1,092</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>4</td>
+                    </tr>
+                    <!-- END Vòng lặp sản phẩm -->
+                </tbody>
+            </table>
+            <table class="information">
+                <tr>
+                    <td style="width:40%;">- Tổng số tiền ( Viết bằng chữ ):</td>
+                    <td class="fill-info">
+                        <span>: Hoàng thị huyền</span>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:40%;">- Số chứng từ gốc kèm theo:</td>
+                    <td class="fill-info">
+                        <span>: Hoàng thị huyền</span>
+
+                    </td>
+                </tr>
+            </table>
+            <table class="sign">
+                <tr class="sign-1">
+                    <td></td>
+                    <td></td>
+                    <td colspan="3" style="text-align:right;">Ngày <span class="red">17</span> tháng <span
+                            class="red">9</span> năm <span class="red">2020</span></td>
+                </tr>
+                <tr class="sign-2">
+                    <td><strong>Người lập phiếu</strong><br>( ký, họ tên)</td>
+                    <td><strong>Người giao hàng</strong><br>( ký, họ tên)</td>
+                    <td><strong>Thủ kho</strong><br>( ký, họ tên)</td>
+                    <td><strong>Kế toán</strong><br>( ký, họ tên)</td>
+
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+    <!-- Phiếu nhập kho -->
+
+
+</body>
+
+</html>
