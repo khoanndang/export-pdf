@@ -254,12 +254,18 @@
                             class="red">{{ "now"|date("m") }}</span> năm <span class="red">{{ "now"|date("Y") }}</span></td>
                 </tr>
                 <tr class="sign-2">
-                    <td><strong>Người lập phiếu</strong><br>( ký, họ tên)</td>
-                    <td><strong>Người nhận hàng</strong><br>( ký, họ tên)</td>
-                    <td><strong>Thủ kho</strong><br>( ký, họ tên)</td>
-                    <td><strong>Kế toán</strong><br>( ký, họ tên)</td>
-                    <td><strong>Giám đốc</strong><br>( ký, họ tên)</td>
-
+                    {% if record.type == 0 %}
+                        <td><strong>Người lập phiếu</strong><br>( ký, họ tên)</td>
+                        <td><strong>Người giao hàng</strong><br>( ký, họ tên)</td>
+                        <td><strong>Thủ kho</strong><br>( ký, họ tên)</td>
+                        <td><strong>Kế toán</strong><br>( ký, họ tên)</td>
+                    {% else %}
+                        <td><strong>Người lập phiếu</strong><br>( ký, họ tên)</td>
+                        <td><strong>Người nhận hàng</strong><br>( ký, họ tên)</td>
+                        <td><strong>Thủ kho</strong><br>( ký, họ tên)</td>
+                        <td><strong>Kế toán</strong><br>( ký, họ tên)</td>
+                        <td><strong>Giám đốc</strong><br>( ký, họ tên)</td>
+                    {% endif %}
                 </tr>
             </table>
         </div>

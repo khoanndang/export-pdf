@@ -6,29 +6,6 @@
     use Khoa\Certificates\Models\Nienkhoa;
     use Khoa\Warehouse\Models\Warehouse;
 
-    Route::get('/seeding-thu-chi',function(){
-        $a=array(0,1);
-
-        for($i=1; $i<=50; $i++) {
-            $random_keys=array_rand($a,1);
-            $new = new Thuchi();
-            $new->ngay_xuat_phieu = Carbon::now();
-            $new->nienkhoa_id = 1;
-            $new->thuctapsinh_id = 3;
-            $new->full_name = 'Nguyễn Văn C';
-            $new->cmnd = '123456789';
-            $new->address = 'HCM';
-            $new->ly_do = 'ABC';
-            $new->type = $random_keys;
-            $new->so_tien = 100000;
-            $new->kem_theo = 100;
-            $new->viet_bang_chu = 'Một trăm ngàn';
-            $new->save();
-        }
-
-        return 'Seeding thu-chi success';
-    });
-
     Route::get('/seeding-certificate',function(){
         $b=array(1,2);
 
@@ -59,6 +36,31 @@
 
         return 'Seeding certificate success';
     });
+
+    Route::get('/seeding-thu-chi',function(){
+        $a=array(0,1);
+
+        for($i=1; $i<=50; $i++) {
+            $random_keys=array_rand($a,1);
+            $new = new Thuchi();
+            $new->ngay_xuat_phieu = Carbon::now();
+            $new->nienkhoa_id = 1;
+            $new->thuctapsinh_id = 3;
+            $new->full_name = 'Nguyễn Văn C';
+            $new->cmnd = '123456789';
+            $new->address = 'HCM';
+            $new->ly_do = 'ABC';
+            $new->type = $random_keys;
+            $new->so_tien = 100000;
+            $new->kem_theo = 100;
+            $new->viet_bang_chu = 'Một trăm ngàn';
+            $new->save();
+        }
+
+        return 'Seeding thu-chi success';
+    });
+
+    
 
     Route::get('/seeding-warehouse', function(){
         $b=array(0,1);
