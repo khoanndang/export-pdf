@@ -19,6 +19,8 @@ class Nienkhoa extends Model
      * @var array Validation rules
      */
     public $rules = [
-        'name' => 'required'
+        'name' => 'required',
+        'start' => 'required',
+        'end' => 'required',
     ];
 }
