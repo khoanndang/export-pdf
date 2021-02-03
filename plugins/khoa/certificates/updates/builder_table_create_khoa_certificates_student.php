@@ -17,6 +17,12 @@ class BuilderTableCreateKhoaCertificatesStudent extends Migration
             $table->text('que_quan')->nullable();
             $table->string('noi_sinh')->nullable();
             $table->string('noi_cap')->nullable();
+            $table->string('nghiep_vu')->nullable();
+            $table->string('ngoai_ngu')->nullable();
+            $table->string('kien_thuc')->nullable();
+            $table->string('slug_nganh')->nullable();
+            $table->date('start')->nullable();
+            $table->date('end')->nullable();
             $table->integer('nhomnganh_id')->unsigned();
             $table->integer('nienkhoa_id')->unsigned();
             $table->timestamp('created_at')->nullable();

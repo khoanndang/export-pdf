@@ -1,4 +1,4 @@
-<?php namespace Khoa\Warehouse\Controllers;
+<?php namespace Khoa\Thuchi\Controllers;
 
 use Backend\Classes\Controller;
 use BackendMenu;
@@ -6,7 +6,7 @@ use Renatio\DynamicPDF\Classes\PDF;
 use Redirect;
 use Session;
 
-class Warehouse extends Controller
+class Thuchi extends Controller
 {
     public $implement = [        'Backend\Behaviors\ListController',        'Backend\Behaviors\FormController'    ];
     
@@ -16,7 +16,7 @@ class Warehouse extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Khoa.Warehouse', 'main-menu-item');
+        BackendMenu::setContext('Khoa.Thuchi', 'main-menu-item');
     }
 
     public function onExport() {
@@ -25,6 +25,6 @@ class Warehouse extends Controller
         Session::put('array_id', $array_id);
 
         // PDF::loadTemplate($templateCode, $data)->save('storage/app/my_stored_file.pdf');
-        return Redirect::to( 'export-pdf-warehouse' );
+        return Redirect::to( 'export-pdf-thu-chi' );
     }
 }

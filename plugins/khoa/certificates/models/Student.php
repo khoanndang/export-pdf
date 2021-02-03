@@ -75,4 +75,14 @@ class Student extends Model
             return Nhomnganh::orderBy('id','desc')->lists('name', 'id');
         }
     }
+
+    public function beforeSave() {
+        $nhom_nganh = Nhomnganh::find($this->nhomnganh_id);
+        $this->nghiep_vu = $nhom_nganh->nghiep_vu;
+        $this->ngoai_ngu = $nhom_nganh->ngoai_ngu;
+        $this->kien_thuc = $nhom_nganh->kien_thuc;
+        $this->slug_nganh = $nhom_nganh->slug;
+        $this->start = $this->nienkhoa->start;
+        $this->end = $this->nienkhoa->end;
+    }
 }

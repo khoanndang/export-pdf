@@ -10,3 +10,11 @@ columns:
         label: 'Họ tên người giao'
         type: text
         searchable: true
+    tai_kho:
+        label: 'Tại kho'
+        type: text
+        searchable: true
+    ngay_xuat_phieu:
+        label: 'Ngày xuất phiếu'
+        type: date
+        format: d/m/Y

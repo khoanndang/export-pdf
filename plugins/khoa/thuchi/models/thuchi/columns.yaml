@@ -1,0 +1,22 @@
+columns:
+    id:
+        label: '#'
+        type: number
+        sortable: true
+    full_name:
+        label: 'Họ tên'
+        type: text
+        searchable: true
+    cmnd:
+        label: CMND
+        type: text
+    nienkhoa:
+        label: 'Niên khóa'
+        type: partial
+        searchable: false
+        path: $/khoa/thuchi/models/thuchi/_nienkhoa.htm
+    type:
+        label: 'Loại phiếu'
+        type: partial
+        searchable: false
+        path: $/khoa/thuchi/models/thuchi/_type.htm

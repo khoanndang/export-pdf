@@ -1,0 +1,12 @@
+scopes:
+  type:
+    label: Loại phiếu
+    type: group
+    conditions: type in (:filtered)
+    modelClass: Khoa\Thuchi\Models\Thuchi
+    options: getTypeOptions
+  
+  ngay_xuat_phieu:
+    label: Ngày xuất phiếu
+    type: daterange
+    conditions: ngay_xuat_phieu >= ':after' AND ngay_xuat_phieu <= ':before'

@@ -31,6 +31,7 @@ fields:
         mode: date
         span: auto
         type: datepicker
+        format: d/m/Y
     nienkhoa:
         label: 'Niên khóa'
         nameFrom: name

@@ -116,6 +116,8 @@
 </style>
 
 <body>
+
+{% for record in data %}
     <!-- Phiếu xuất kho -->
     <div class="table-cer">
         <table class="logo">
@@ -131,41 +133,56 @@
             </tr>
         </table>
         <div class="content" style="text-align: center;">
-            <h2>PHIẾU XUẤT KHO</h2>
-            <h3>Ngày <span class="red">17</span> tháng <span class="red">9</span> năm <span class="red">2020</span></h3>
-            <h3>Số : <span class="red">PNSTR2T0101</span></h3>
+            <h2>PHIẾU {% if record.type == 0 %}NHẬP{% else %}XUẤT{% endif %} KHO</h2>
+            <h3>Ngày <span class="red">{{ record.ngay_xuat_phieu | date("d") }}</span> tháng <span class="red">{{ record.ngay_xuat_phieu | date("m") }}</span> năm <span class="red">{{ record.ngay_xuat_phieu | date("Y") }}</span></h3>
+            <h3>Số : <span class="red">{{ record.ma_kho }}</span></h3>
         </div>
         <div class="background">
             <table class="information">
                 <tr>
-                    <td colspan="1" class="left-info">- Họ và tên người nhận</td>
+                    <td colspan="1" class="left-info">- Họ và tên {% if record.type == 0 %}người giao{% else %}người nhận{% endif %}</td>
                     <td colspan="4" class="fill-info">
-                        <span>: Hoàng thị huyền</span>
+                        <span>: {{ record.full_name }}</span>
+
+                    </td>
+                </tr>
+                {% if record.type == 0 %}
+                    <tr>
+                        <td colspan="5" class="left-info">- Theo ..<span class="fill-info">{{ record.theo }}</span>.. ngày..<span class="fill-info">{{ record.thoi_gian | date('d') }}</span>..tháng..<span class="fill-info">{{ record.thoi_gian | date('m') }}</span>..năm ..<span class="fill-info">{{ record.thoi_gian | date('Y') }}</span>.. của..<span class="fill-info">{{ record.cua }}</span>.. </td>
+                        
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="1" class="left-info">- Địa chỉ (bộ phận)</td>
+                        <td colspan="4" class="fill-info">
+                            <span>: {{ record.dia_chi }}</span>
+
+                        </td>
+                    </tr>
+                {% endif %}
+                <tr>
+                    <td colspan="1" class="left-info">- Lý do {% if record.type == 0 %}nhập{% else %}xuất{% endif %} kho </td>
+                    <td colspan="4" class="fill-info">
+                        <span>: {{ record.ly_do }}</span>
 
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="1" class="left-info">- Địa chỉ (bộ phận)</td>
-                    <td colspan="4" class="fill-info">
-                        <span>: Hoàng thị huyền</span>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="left-info">- Lý do xuất kho </td>
-                    <td colspan="4" class="fill-info">
-                        <span>: Hoàng thị huyền</span>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="left-info">- Xuất tại kho (ngăn lô)</td>
-                    <td colspan="2" class="fill-info"><span>: Hoàng thị huyền</span></td>
-                    <td colspan="3" class="fill-info"><span style="color:black;">- Địa chỉ :</span><span>Hoàng thị
-                            huyền</span></td>
+                    {% if record.type == 0 %}
+                        <td colspan="1" class="left-info">-Nhập tại kho</td>
+                        <td colspan="2" class="fill-info"><span>: {{ record.tai_kho }}</span></td>
+                        <td colspan="3" class="fill-info"><span style="color:black;">- Địa điểm :</span><span>{{ record.dia_diem }}</span></td>
+                        
+                    {% else %}
+                        <td colspan="1" class="left-info">- Xuất tại kho (ngăn lô)</td>
+                        <td colspan="2" class="fill-info"><span>: {{ record.tai_kho }}</span></td>
+                        <td colspan="3" class="fill-info"><span style="color:black;">- Địa điểm :</span><span>{{ record.dia_diem }}</span></td>
+                    {% endif %}
+                        
                 </tr>
             </table>
             <table class="list">
+                
                 <thead>
                     <tr>
                         <th rowspan="2">STT</th>
@@ -195,31 +212,36 @@
                         <td>4</td>
                     </tr>
                     <!-- Vòng lặp sản phẩm -->
-                    <tr>
-                        <td>1</td>
-                        <td> Gỗ thành phẩm ACACI A loại 1 28X39 TR28391 m3</td>
-                        <td>TR28391</td>
-                        <td>m3</td>
-                        <td>1,092</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>4</td>
-                    </tr>
+                    {% set i = 1 %}
+                    {% for json_item in record.json_data %} 
+                        <tr>
+                            <td>{{ i }}</td>
+                            <td>{{ json_item.name_field }}</td>
+                            <td>{{ json_item.ma_so }}</td>
+                            <td>{{ json_item.don_vi_tinh }}</td>
+                            <td>{{ json_item.theo_chung_tu }}</td>
+                            <td>{{ json_item.thuc_nhap }}</td>
+                            <td>{{ json_item.don_gia }}</td>
+                            <td>{{ json_item.thanh_tien }}</td>
+                        </tr>
+                    {% set i = i + 1 %}
+                    {% endfor %}
                     <!-- END Vòng lặp sản phẩm -->
                 </tbody>
+                
             </table>
             <table class="information">
                 <tr>
                     <td style="width:40%;">- Tổng số tiền ( Viết bằng chữ ):</td>
                     <td class="fill-info">
-                        <span>: Hoàng thị huyền</span>
+                        <span>: {{ record.tong_so_tien_viet_bang_chu }}</span>
 
                     </td>
                 </tr>
                 <tr>
                     <td style="width:40%;">- Số chứng từ gốc kèm theo:</td>
                     <td class="fill-info">
-                        <span>: Hoàng thị huyền</span>
+                        <span>: {{ record.so_chung_tu_goc_kem_theo }}</span>
 
                     </td>
                 </tr>
@@ -228,8 +250,8 @@
                 <tr class="sign-1">
                     <td></td>
                     <td></td>
-                    <td colspan="3" style="text-align:right;">Ngày <span class="red">17</span> tháng <span
-                            class="red">9</span> năm <span class="red">2020</span></td>
+                    <td colspan="3" style="text-align:right;">Ngày <span class="red">{{ "now"|date("d") }}</span> tháng <span
+                            class="red">{{ "now"|date("m") }}</span> năm <span class="red">{{ "now"|date("Y") }}</span></td>
                 </tr>
                 <tr class="sign-2">
                     <td><strong>Người lập phiếu</strong><br>( ký, họ tên)</td>
@@ -244,7 +266,9 @@
 
 
     </div>
+    <div class="page-break"></div>
     <!-- Phiếu xuất kho -->
+{% endfor %}
 
     <!-- Phiếu nhập kho -->
     <div class="table-cer">
@@ -261,7 +285,7 @@
             </tr>
         </table>
         <div class="content" style="text-align: center;">
-            <h2>PHIẾU XUẤT KHO</h2>
+            <h2>PHIẾU NHẬP KHO</h2>
             <h3>Ngày <span class="red">17</span> tháng <span class="red">9</span> năm <span class="red">2020</span></h3>
             <h3>Số : <span class="red">PNSTR2T0101</span></h3>
         </div>

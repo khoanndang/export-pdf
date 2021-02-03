@@ -14,37 +14,13 @@ tabs:
             span: auto
             type: dropdown
             tab: 'Thông tin chung'
+            placeholder: '-- Chọn loại hình --'
         full_name:
-            label: 'Họ và tên người giao'
+            label: 'Họ và tên'
             span: auto
             type: text
             tab: 'Thông tin chung'
-        theo:
-            label: Theo
-            span: auto
-            type: text
-            tab: 'Thông tin chung'
-        ngay:
-            label: 'Ngày'
-            span: auto
-            type: text
-            tab: 'Thông tin chung'
-        thang:
-            label: Tháng
-            span: auto
-            type: text
-            tab: 'Thông tin chung'
-        nam:
-            label: Năm
-            span: auto
-            type: text
-            tab: 'Thông tin chung'
-        cua:
-            label: Của
-            span: auto
-            type: text
-            tab: 'Thông tin chung'
-        nhap_tai_kho:
+        tai_kho:
             label: 'Nhập tại kho'
             span: auto
             type: text
@@ -54,12 +30,34 @@ tabs:
             span: auto
             type: text
             tab: 'Thông tin chung'
+        ngay_xuat_phieu:
+            label: 'Ngày xuất phiếu'
+            mode: date
+            span: auto
+            type: datepicker
+            tab: 'Thông tin chung'
+            format: d/m/Y
+        tong_so_tien_viet_bang_chu:
+            label: 'Tổng số tiền (viết bằng chữ)'
+            span: auto
+            type: text
+            tab: 'Thông tin chung'
+        so_chung_tu_goc_kem_theo:
+            label: 'Số chứng từ gốc kèm theo'
+            span: auto
+            type: text
+            tab: 'Thông tin chung'
+        ly_do:
+            label: 'Lý do'
+            span: full
+            type: text
+            tab: 'Thông tin chung'
         json_data:
             label: 'Thông tin xuất nhập'
             prompt: 'Add new item'
             span: full
             type: repeater
-            tab: 'Thông tin xuất nhập'
+            tab: 'Thông tin xuất nhập (JSON)'
             form:
                 fields:
                     name_field:
@@ -90,3 +88,25 @@ tabs:
                         label: 'Thành tiền'
                         span: auto
                         type: text
+        theo:
+            label: Theo
+            span: auto
+            type: text
+            tab: 'Thông tin nhập'
+        thoi_gian:
+            label: 'Thời gian'
+            mode: date
+            format: d/m/Y
+            span: auto
+            type: datepicker
+            tab: 'Thông tin nhập'
+        cua:
+            label: Của
+            span: auto
+            type: text
+            tab: 'Thông tin nhập'
+        dia_chi:
+            label: 'Địa chỉ (bộ phận)'
+            span: full
+            type: text
+            tab: 'Thông tin xuất'

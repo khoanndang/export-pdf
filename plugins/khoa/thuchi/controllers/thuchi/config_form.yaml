@@ -1,0 +1,10 @@
+name: Thuchi
+form: $/khoa/thuchi/models/thuchi/fields.yaml
+modelClass: Khoa\Thuchi\Models\Thuchi
+defaultRedirect: khoa/thuchi/thuchi
+create:
+    redirect: 'khoa/thuchi/thuchi/update/:id'
+    redirectClose: khoa/thuchi/thuchi
+update:
+    redirect: khoa/thuchi/thuchi
+    redirectClose: khoa/thuchi/thuchi

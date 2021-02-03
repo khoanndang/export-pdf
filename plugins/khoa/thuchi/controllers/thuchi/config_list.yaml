@@ -1,6 +1,6 @@
-list: $/khoa/warehouse/models/warehouse/columns.yaml
-modelClass: Khoa\Warehouse\Models\Warehouse
-title: Warehouse
+list: $/khoa/thuchi/models/thuchi/columns.yaml
+modelClass: Khoa\Thuchi\Models\Thuchi
+title: Thuchi
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true
 showCheckboxes: true
@@ -10,4 +10,4 @@ toolbar:
     buttons: list_toolbar
     search:
         prompt: 'backend::lang.list.search_prompt'
-recordUrl: 'khoa/warehouse/warehouse/update/:id'
+recordUrl: 'khoa/thuchi/thuchi/update/:id'

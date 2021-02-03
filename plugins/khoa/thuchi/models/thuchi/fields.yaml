@@ -1,0 +1,50 @@
+fields:
+    nienkhoa:
+        label: 'Niên khóa'
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+        placeholder: '-- Chọn niên khóa --'
+    thuctapsinh_id:
+        label: 'Họ tên'
+        showSearch: true
+        span: auto
+        placeholder: '-- Chọn thực tập sinh --'
+        type: dropdown
+        dependsOn: nienkhoa
+    so_tien:
+        label: 'Số tiền (VNĐ)'
+        span: auto
+        type: number
+    viet_bang_chu:
+        label: 'Viết bằng chữ'
+        span: auto
+        type: text
+    address:
+        label: 'Địa chỉ'
+        span: auto
+        type: text
+    ngay_xuat_phieu:
+        label: 'Ngày xuất phiếu'
+        span: auto
+        mode: date
+        type: datepicker
+        format: d/m/Y
+    kem_theo:
+        label: 'Kèm theo'
+        span: auto
+        type: text
+    type:
+        label: 'Loại phiếu'
+        span: auto
+        showSearch: true
+        options:
+            - Thu
+            - Chi
+        placeholder: '-- Chọn loại phiếu --'
+        type: dropdown
+    ly_do:
+        label: 'Lý do'
+        span: full
+        type: text

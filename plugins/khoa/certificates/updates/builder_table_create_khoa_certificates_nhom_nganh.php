@@ -15,6 +15,7 @@ class BuilderTableCreateKhoaCertificatesNhomNganh extends Migration
             $table->string('ngoai_ngu')->nullable();
             $table->string('kien_thuc')->nullable();
             $table->string('name');
+            $table->string('slug');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

@@ -1,0 +1,11 @@
+plugin:
+    name: 'khoa.thuchi::lang.plugin.name'
+    description: 'khoa.thuchi::lang.plugin.description'
+    author: Khoa
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Thu - Chi'
+        url: khoa/thuchi/thuchi
+        icon: icon-money

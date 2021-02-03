@@ -1,0 +1,5 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table khoa_thuchi_thuchis'
+    - builder_table_create_khoa_thuchi_thuchis.php

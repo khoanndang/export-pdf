@@ -1,0 +1,26 @@
+scopes:
+  type:
+    label: Loại phiếu
+    type: group
+    conditions: type in (:filtered)
+    modelClass: Khoa\Warehouse\Models\Warehouse
+    options: getTypeOptions
+  
+  ma_kho:
+    label: Mã kho
+    type: group
+    conditions: ma_kho like (:filtered)
+    modelClass: Khoa\Warehouse\Models\Warehouse
+    options: getMaKhoOptions
+  
+  tai_kho:
+    label: Nhập tại kho
+    type: group
+    conditions: nhap_tai_kho like (:filtered)
+    modelClass: Khoa\Warehouse\Models\Warehouse
+    options: getTaiKhoOptions
+
+  ngay_xuat_phieu:
+    label: Ngày xuất phiếu
+    type: daterange
+    conditions: ngay_xuat_phieu >= ':after' AND ngay_xuat_phieu <= ':before'

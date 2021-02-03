@@ -1,8 +1,15 @@
 fields:
     name:
         label: 'Tên nhóm ngành'
-        span: full
+        span: auto
         required: 1
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: name
+            type: slug
         type: text
     nghiep_vu:
         label: 'Nghiệp vụ'
@@ -29,3 +36,4 @@ fields:
         useKey: false
         required: 1
         type: taglist
+        placeholder: -- Chọn niên khóa --
