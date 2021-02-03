@@ -1,0 +1,29 @@
+title = "Export PDF THU - CHI"
+url = "/export-pdf-thu-chi"
+is_hidden = 0
+==
+use Renatio\DynamicPDF\Classes\PDF;
+use Khoa\Thuchi\Models\Thuchi;
+use Db;
+
+function onStart()
+{
+    // $fileName = 'my_stored_file.pdf';
+
+    $templateCode = 'thu-chi'; // unique code of the template
+
+    $array_id = Session::pull('array_id', 'default');
+    // dd($array_id);
+
+    $list_data = Thuchi::whereIn('id',$array_id)->get();
+    // dd($list_data);
+
+    $data = ['data' => $list_data];
+
+    // foreach($data['data'] as $item) {
+    //     dd($item->nhomnganh->start);
+    // }
+
+    return PDF::loadTemplate($templateCode, $data)->stream();
+}
+==

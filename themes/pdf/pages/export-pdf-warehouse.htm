@@ -1,0 +1,28 @@
+title = "Export PDF WAREHOUSE"
+url = "/export-pdf-warehouse"
+is_hidden = 0
+==
+use Renatio\DynamicPDF\Classes\PDF;
+use Khoa\Warehouse\Models\Warehouse;
+use Db;
+
+function onStart()
+{
+
+    $templateCode = 'warehouse'; // unique code of the template
+
+    $array_id = Session::pull('array_id', 'default');
+    // dd($array_id);
+
+    $list_data = Warehouse::whereIn('id',$array_id)->get();
+    // dd($list_data);
+
+    $data = ['data' => $list_data];
+
+    // foreach($data['data'] as $item) {
+    //     dd($item->nhomnganh->start);
+    // }
+
+    return PDF::loadTemplate($templateCode, $data)->stream();
+}
+==

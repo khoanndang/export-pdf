@@ -1,0 +1,29 @@
+title = "Export PDF Certificate"
+url = "/export-pdf-certificate"
+is_hidden = 0
+==
+use Renatio\DynamicPDF\Classes\PDF;
+use Khoa\Certificates\Models\Student;
+use  Db;
+
+function onStart()
+{
+    // $fileName = 'my_stored_file.pdf';
+
+    $templateCode = 'certificate'; // unique code of the template
+
+    $array_id = Session::pull('array_id', 'default');
+    // dd($array_id);
+
+    $list_data = Student::whereIn('id',$array_id)->get();
+    // dd($list_data);
+
+    $data = ['data' => $list_data];
+
+    // foreach($data['data'] as $item) {
+    //     dd($item->nhomnganh->start);
+    // }
+
+    return PDF::loadTemplate($templateCode, $data)->stream();
+}
+==
