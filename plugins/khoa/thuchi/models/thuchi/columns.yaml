@@ -20,3 +20,7 @@ columns:
         type: partial
         searchable: false
         path: $/khoa/thuchi/models/thuchi/_type.htm
+    ngay_xuat_phieu:
+        label: 'Ngày xuất phiếu'
+        type: date
+        format: d/m/Y

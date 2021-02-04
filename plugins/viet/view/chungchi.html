@@ -118,7 +118,7 @@
 
 <body>
     <!-- Ngành hộ lý -->
-{% for record in data %}
+    {% for record in data %}
     <div class="table-cer">
         <table class="logo">
             <tr>
@@ -146,7 +146,7 @@
                         <tr>
                             <td class="left-info">Sinh ngày </td>
                             <td class="fill-info">
-                                <span>: {{ record.dob }}</span>
+                                <span>: {{ record.dob | date('d/m/Y') }}</span>
 
                             </td>
                             <td class="left-info">Nơi sinh </td>
@@ -178,7 +178,7 @@
             <p style="font-size:12px;font-weight:bold;">Đã hoàn thành chương trình đạo tạo {{ record.nghiep_vu }} giờ nghiệp vụ, {{ record.ngoai_ngu }} giờ
                 ngoại ngữ và {{ record.kien_thuc }} giờ kiến thức cần thiết
                 trước khi sang Nhật Bản thực hiện chương trình Thực tập sinh kỹ năng</p>
-            <p style="font-size:12px;margin:0;padding:0;">Thời gian đào tạo : <span class="red">Từ {{ record.start | date('d/m/Y')}} </span> đến <span class="red"> record.end | date('d/m/Y')}} </span> </p>
+            <p style="font-size:12px;margin:0;padding:0;">Thời gian đào tạo : Từ <span class="red">{{ record.start | date('d/m/Y')}}</span> đến <span class="red">{{ record.end | date('d/m/Y')}}</span> </p>
         </div>
 
 
