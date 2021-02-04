@@ -276,18 +276,127 @@
     <!-- Phiếu xuất kho -->
 {% endfor %}
 
+<!-- Xuất - nhập đã chốt  -->
+
+             <!-- Phiếu xuất kho -->
+    <div class="table-cer">
+        <table class="logo">
+            <tr>
+                <td><img src="plugins/renatio/dynamicpdf/assets/logo.png" width="150px"></td>
+                <td><img src="plugins/renatio/dynamicpdf/assets/keyvisual.png" width="150px" style="float:right;"></td>
+            </tr>
+        </table>
+        <div class="content" style="text-align: center;">
+            <h2>PHIẾU XUẤT KHO</h2>
+            <h3>Ngày <span class="red">17</span> tháng <span class="red">9</span> năm <span class="red">2020</span></h3>
+            <h3>Số : <span class="red">PNSTR2T0101</span></h3>
+        </div>
+        <div class="background">
+           
+            <table class="list">
+                <thead>
+                    <tr>
+                        <th >STT</th>
+                        <th >Mã số</th>
+                        <th >Tên, nhãn hiệu, quy cách, phẩm <br> chất vật tư, dụng cụ sản phẩm, hàng hóa</th>
+                        <th >Nhà cung cấp</th>
+                        <th >Ðơn vị tính</th>
+                        <th >Số lượng nhập</th>
+                        <th >Đơn giá</th>
+                        <th >Thành tiền</th>
+                        <th >Lý do xuất khẩu</th>
+                        <th >Họ tên người nhận</th>
+                        <th >Ký nhận</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <!-- Vòng lặp sản phẩm -->
+                    <tr>
+                        <td>1</td>
+                        <td>TR28391</td>
+                        <td> Gỗ thành phẩm ACACI A loại 1 28X39 TR28391 m3</td>
+                        <td>nhà cung cấp</td>
+                        <td>m3</td>
+                        <td>1,092</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                    </tr>
+                    <!-- END Vòng lặp sản phẩm -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"><span style="margin:20px;font-size:16px;font-weight:bold;">Tổng cộng</span></td>
+                        <td>.....</td>
+                        <td>.....</td>
+                        <td>.....</td>
+                        <td>.....</td>
+                        <td>.....</td>
+                        <td>.....</td>
+                        <td>.....</td>
+                        <td>.....</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <table class="information">
+                <tr>
+                    <td style="width:40%;">- Số chứng từ gốc kèm theo:</td>
+                    <td class="fill-info">
+                        <span>: Hoàng thị huyền</span>
+
+                    </td>
+                </tr>
+            </table>
+            <table class="sign">
+                <tr class="sign-1">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td >Ngày <span class="red">17</span> tháng <span
+                            class="red">9</span> năm <span class="red">2020</span></td>
+                </tr>
+                <tr class="sign-2">
+                    <td><strong>Người lập phiếu</strong><br>( ký, họ tên)</td>
+                    <td><strong>Thủ kho</strong><br>( ký, họ tên)</td>
+                    <td><strong>Kế toán</strong><br>( ký, họ tên)</td>
+                    <td><strong>Giám đốc</strong><br>( ký, họ tên)</td>
+
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+    <div class="footer">
+        <table>
+            <tr>
+                <td>
+                    <img src="plugins/renatio/dynamicpdf/assets/mail.png">
+                    <span>contact@dgnozomi.com.vn</span>
+                </td>
+                <td><img src="plugins/renatio/dynamicpdf/assets/globe.png">dgnozomi.com.vn</td>
+            </tr>
+            <tr>
+                <td><img src="plugins/renatio/dynamicpdf/assets/facebook.png">Xuất khẩu lao động Nhật Bản - DG Nozomi
+                </td>
+                <td><img src="plugins/renatio/dynamicpdf/assets/phone.png">1900 8628 | 096 690 6862 | 093 260 6862 | 098 264 6862</td>
+                <td><img src="plugins/renatio/dynamicpdf/assets/location.png">406/61 Cộng Hòa, P.13, Q. Tân Bình, TP.HCM
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="page-break"></div>
+    <!-- Phiếu xuất kho -->
+
     <!-- Phiếu nhập kho -->
     <div class="table-cer">
         <table class="logo">
             <tr>
-                <td><img src="plugins/renatio/dynamicpdf/assets/logo.png" width="150px">
-                    <p>406/61 Cộng Hòa, Phường 13, Quận Tân Bình,<br>TP.HCM, Việt Nam</p>
-                </td>
-                <td style="text-align:center;width:50%;">
-                    <p style="font-weight:bold;margin-top:-40px;">Mẫu số : 01 - VT</p>
-                    <p style="font-size:12px;">(Ban hành theo Thông tư số 200/2014/TT-BTC <br>Ngày 22/12/2014 của Bộ Tài
-                        chính )</p>
-                </td>
+                <td><img src="plugins/renatio/dynamicpdf/assets/logo.png" width="150px"></td>
+                <td><img src="plugins/renatio/dynamicpdf/assets/keyvisual.png" width="150px" style="float:right;"></td>
             </tr>
         </table>
         <div class="content" style="text-align: center;">
@@ -296,74 +405,48 @@
             <h3>Số : <span class="red">PNSTR2T0101</span></h3>
         </div>
         <div class="background">
-            <table class="information">
-                <tr>
-                    <td colspan="1" class="left-info">- Họ tên người giao</td>
-                    <td colspan="4" class="fill-info">
-                        <span>: Hoàng thị huyền</span>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="5" class="left-info">- Theo .................. ngày..................tháng................năm .......... của.................................................... </td>
-                    
-                </tr>
-                <tr>
-                    <td colspan="1" class="left-info">- Lý do xuất kho </td>
-                    <td colspan="4" class="fill-info">
-                        <span>: Hoàng thị huyền</span>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="left-info">-Nhập tại kho</td>
-                    <td colspan="2" class="fill-info"><span>: Hoàng thị huyền</span></td>
-                    <td colspan="3" class="fill-info"><span style="color:black;">- Địa điểm :</span><span>Hoàng thị
-                            huyền</span></td>
-                </tr>
-            </table>
+            
             <table class="list">
                 <thead>
                     <tr>
-                        <th rowspan="2">STT</th>
-                        <th rowspan="2">Tên, nhãn hiệu, quy cách, phẩm <br> chất vật tư, dụng cụ sản phẩm, hàng hóa</th>
-                        <th rowspan="2">Mã số</th>
-                        <th rowspan="2">Ðơn vị tính</th>
-                        <th colspan="2">Số lượng</th>
-                        <th rowspan="2">Đơn giá</th>
-                        <th rowspan="2">Thành tiền</th>
-
-                    </tr>
-                    <tr>
-                        <th>Theo chứng từ</th>
-                        <th>Thực nhập</th>
+                        <th >STT</th>
+                        <th >Mã số</th>
+                        <th >Tên, nhãn hiệu, quy cách, phẩm <br> chất vật tư, dụng cụ sản phẩm, hàng hóa</th>
+                        <th >Nhà cung cấp</th>
+                        <th >Ðơn vị tính</th>
+                        <th >Số lượng nhập</th>
+                        <th >Đơn giá</th>
+                        <th >Thành tiền</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
 
-                    <tr>
-                        <td>A</td>
-                        <td>B</td>
-                        <td>C</td>
-                        <td>D</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                    </tr>
                     <!-- Vòng lặp sản phẩm -->
                     <tr>
                         <td>1</td>
-                        <td> Gỗ thành phẩm ACACI A loại 1 28X39 TR28391 m3</td>
                         <td>TR28391</td>
+                        <td> Gỗ thành phẩm ACACI A loại 1 28X39 TR28391 m3</td>
+                        <td>nhà cung cấp</td>
                         <td>m3</td>
                         <td>1,092</td>
                         <td>0</td>
                         <td>0</td>
-                        <td>4</td>
+                        
                     </tr>
                     <!-- END Vòng lặp sản phẩm -->
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"><span style="margin:20px;font-size:16px;font-weight:bold;">Tổng cộng</span></td>
+                        <td>.....</td>
+                        <td>.....</td>
+                        <td>.....</td>
+                        <td>.....</td>
+                        <td>.....</td>
+                        
+                    </tr>
+                </tfoot>
             </table>
             <table class="information">
                 <tr>
@@ -385,12 +468,11 @@
                 <tr class="sign-1">
                     <td></td>
                     <td></td>
-                    <td colspan="3" style="text-align:right;">Ngày <span class="red">17</span> tháng <span
+                    <td >Ngày <span class="red">17</span> tháng <span
                             class="red">9</span> năm <span class="red">2020</span></td>
                 </tr>
                 <tr class="sign-2">
                     <td><strong>Người lập phiếu</strong><br>( ký, họ tên)</td>
-                    <td><strong>Người giao hàng</strong><br>( ký, họ tên)</td>
                     <td><strong>Thủ kho</strong><br>( ký, họ tên)</td>
                     <td><strong>Kế toán</strong><br>( ký, họ tên)</td>
 
@@ -400,6 +482,25 @@
 
 
     </div>
+    <div class="footer">
+        <table>
+            <tr>
+                <td>
+                    <img src="plugins/renatio/dynamicpdf/assets/mail.png">
+                    <span>contact@dgnozomi.com.vn</span>
+                </td>
+                <td><img src="plugins/renatio/dynamicpdf/assets/globe.png">dgnozomi.com.vn</td>
+            </tr>
+            <tr>
+                <td><img src="plugins/renatio/dynamicpdf/assets/facebook.png">Xuất khẩu lao động Nhật Bản - DG Nozomi
+                </td>
+                <td><img src="plugins/renatio/dynamicpdf/assets/phone.png">1900 8628 | 096 690 6862 | 093 260 6862 | 098 264 6862</td>
+                <td><img src="plugins/renatio/dynamicpdf/assets/location.png">406/61 Cộng Hòa, P.13, Q. Tân Bình, TP.HCM
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="page-break"></div>
     <!-- Phiếu nhập kho -->
 
 
