@@ -15,21 +15,6 @@ tabs:
             type: dropdown
             tab: 'Thông tin chung'
             placeholder: '-- Chọn loại hình --'
-        full_name:
-            label: 'Họ và tên'
-            span: auto
-            type: text
-            tab: 'Thông tin chung'
-        tai_kho:
-            label: 'Nhập tại kho'
-            span: auto
-            type: text
-            tab: 'Thông tin chung'
-        dia_diem:
-            label: 'Địa điểm'
-            span: auto
-            type: text
-            tab: 'Thông tin chung'
         ngay_xuat_phieu:
             label: 'Ngày xuất phiếu'
             mode: date
@@ -47,37 +32,41 @@ tabs:
             span: auto
             type: text
             tab: 'Thông tin chung'
-        ly_do:
-            label: 'Lý do'
-            span: full
-            type: text
-            tab: 'Thông tin chung'
-        json_data:
-            label: 'Thông tin xuất nhập'
+        json_data_nhap:
+            label: 'Thông tin nhập'
             prompt: 'Add new item'
             span: full
             type: repeater
-            tab: 'Thông tin xuất nhập (JSON)'
+            tab: 'Thông tin nhập (JSON)'
+            dependsOn: type
             form:
                 fields:
-                    name_field:
-                        label: 'Tên, nhãn hiệu, quy cách, phẩm chất vật tư, dụng cụ sản phẩm, hàng hóa'
-                        span: auto
-                        type: text
                     ma_so:
                         label: 'Mã số'
+                        span: auto
+                        type: text
+                    ten_nhan_hieu:
+                        label: 'Tên nhãn hiệu'
+                        span: auto
+                        type: text
+                    quy_cach_vat_tu:
+                        label: 'Quy cách vật tư'
+                        span: auto
+                        type: text
+                    dung_cu_hang_hoa:
+                        label: 'Dụng cụ & hàng hóa'
+                        span: auto
+                        type: text
+                    nha_cung_cap:
+                        label: 'Nhà cung cấp'
                         span: auto
                         type: text
                     don_vi_tinh:
                         label: 'Đơn vị tính'
                         span: auto
                         type: text
-                    theo_chung_tu:
-                        label: 'Theo chứng từ'
-                        span: auto
-                        type: text
-                    thuc_nhap:
-                        label: 'Thực nhập'
+                    so_luong_nhap:
+                        label: 'Số lượng nhập'
                         span: auto
                         type: text
                     don_gia:
@@ -88,25 +77,56 @@ tabs:
                         label: 'Thành tiền'
                         span: auto
                         type: text
-        theo:
-            label: Theo
-            span: auto
-            type: text
-            tab: 'Thông tin nhập'
-        thoi_gian:
-            label: 'Thời gian'
-            mode: date
-            format: d/m/Y
-            span: auto
-            type: datepicker
-            tab: 'Thông tin nhập'
-        cua:
-            label: Của
-            span: auto
-            type: text
-            tab: 'Thông tin nhập'
-        dia_chi:
-            label: 'Địa chỉ (bộ phận)'
+        json_data_xuat:
+            label: 'Thông tin xuất'
+            prompt: 'Add new item'
             span: full
-            type: text
-            tab: 'Thông tin xuất'
+            type: repeater
+            tab: 'Thông tin xuất (JSON)'
+            dependsOn: type
+            form:
+                fields:
+                    ma_so:
+                        label: 'Mã số'
+                        span: auto
+                        type: text
+                    ten_nhan_hieu:
+                        label: 'Tên nhãn hiệu'
+                        span: auto
+                        type: text
+                    quy_cach_vat_tu:
+                        label: 'Quy cách vật tư'
+                        span: auto
+                        type: text
+                    dung_cu_hang_hoa:
+                        label: 'Dụng cụ & hàng hóa'
+                        span: auto
+                        type: text
+                    nha_cung_cap:
+                        label: 'Nhà cung cấp'
+                        span: auto
+                        type: text
+                    don_vi_tinh:
+                        label: 'Đơn vị tính'
+                        span: auto
+                        type: text
+                    so_luong_nhap:
+                        label: 'Số lượng nhập'
+                        span: auto
+                        type: text
+                    don_gia:
+                        label: 'Đơn giá'
+                        span: auto
+                        type: text
+                    thanh_tien:
+                        label: 'Thành tiền'
+                        span: auto
+                        type: text
+                    ly_do_xuat_khau:
+                        label: 'Lý do xuất khẩu'
+                        span: auto
+                        type: text
+                    ho_ten_nguoi_nhan:
+                        label: 'Họ tên người nhận'
+                        span: auto
+                        type: text

@@ -12,13 +12,6 @@ scopes:
     conditions: ma_kho like (:filtered)
     modelClass: Khoa\Warehouse\Models\Warehouse
     options: getMaKhoOptions
-  
-  tai_kho:
-    label: Nhập tại kho
-    type: group
-    conditions: nhap_tai_kho like (:filtered)
-    modelClass: Khoa\Warehouse\Models\Warehouse
-    options: getTaiKhoOptions
 
   ngay_xuat_phieu:
     label: Ngày xuất phiếu

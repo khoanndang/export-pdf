@@ -6,15 +6,12 @@ columns:
     ma_kho:
         label: 'Mã kho'
         type: text
-    full_name:
-        label: 'Họ tên người giao'
-        type: text
-        searchable: true
-    tai_kho:
-        label: 'Tại kho'
-        type: text
-        searchable: true
     ngay_xuat_phieu:
         label: 'Ngày xuất phiếu'
         type: date
         format: d/m/Y
+    type:
+        label: 'Loại phiếu'
+        type: partial
+        searchable: false
+        path: $/khoa/warehouse/models/warehouse/_type.htm

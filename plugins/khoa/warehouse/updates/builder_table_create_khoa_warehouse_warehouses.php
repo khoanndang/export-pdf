@@ -13,18 +13,13 @@ class BuilderTableCreateKhoaWarehouseWarehouses extends Migration
             $table->increments('id')->unsigned();
             $table->string('ma_kho');
             $table->smallInteger('type')->default(0)->comment('0: Xuat, 1: Nhap');
-            $table->string('full_name');
-            $table->string('theo')->nullable();
-            $table->date('thoi_gian')->nullable();
-            $table->string('cua')->nullable();
-            $table->text('dia_chi')->nullable();
-            $table->text('tai_kho');
-            $table->text('dia_diem');
-            $table->text('ly_do');
+            $table->date('ngay_xuat_phieu');
             $table->text('tong_so_tien_viet_bang_chu');
             $table->string('so_chung_tu_goc_kem_theo');
-            $table->text('json_data');
-            $table->date('ngay_xuat_phieu');
+            
+            $table->text('json_data_nhap')->nullable();
+            $table->text('json_data_xuat')->nullable();
+            
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

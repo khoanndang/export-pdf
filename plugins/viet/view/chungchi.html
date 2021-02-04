@@ -119,6 +119,106 @@
 <body>
     <!-- Ngành hộ lý -->
     {% for record in data %}
+    <!-- 1 -->
+    <div class="table-cer">
+        <table class="logo">
+            <tr>
+                <td><img src="plugins/renatio/dynamicpdf/assets/logo.png" width="180px"></td>
+                <td>
+                    <h4 style="margin-top:-50px;text-align: center;">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM <br> <span
+                            style="text-decoration: underline;">Độc lập - Tự do - Hạnh phúc</span></h4>
+                </td>
+            </tr>
+            <tr>
+                <td class="avatar"></td>
+                <td class="background">
+                    <h2 style="margin-top:-40px;text-align: center;">CHỨNG CHỈ ĐÀO TẠO NGHIỆP VỤ<br> NGOẠI NGỮ VÀ KIẾN
+                        THỨC CẦN THIẾT
+                    </h2>
+                    <p style="text-align: center;margin:0;">(Dành cho Thực tập sinh kỹ năng tại Nhật Bản)</p>
+                    <table class="information">
+                        <tr>
+                            <td class="left-info" style="width:44%;">Cấp cho </td>
+                            <td colspan="2" class="fill-info">
+                                <span>: {{ record.ho_ten }}</span>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-info">Sinh ngày </td>
+                            <td class="fill-info">
+                                <span>: {{ record.dob | date('d/m/Y') }}</span>
+
+                            </td>
+                            <td class="left-info">Nơi sinh </td>
+                            <td class="fill-info">
+                                <span>: {{ record.noi_sinh }}</span>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-info">Số CMND</td>
+                            <td colspan="2" class="fill-info">
+                                <span>: {{ record.cmnd }}</span>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-info">Quê quán </td>
+                            <td colspan="2" class="fill-info">
+                                <span>: {{ record.que_quan }}</span>
+
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <div class="description">
+            <p style="font-size:12px;font-weight:bold;">Đã hoàn thành chương trình đạo tạo {{ record.nghiep_vu }} giờ nghiệp vụ, {{ record.ngoai_ngu }} giờ
+                ngoại ngữ và {{ record.kien_thuc }} giờ kiến thức cần thiết
+                trước khi sang Nhật Bản thực hiện chương trình Thực tập sinh kỹ năng</p>
+            <p style="font-size:12px;margin:0;padding:0;">Thời gian đào tạo : Từ <span class="red">{{ record.start | date('d/m/Y')}}</span> đến <span class="red">{{ record.end | date('d/m/Y')}}</span> </p>
+        </div>
+
+
+        <table class="sign">
+            <tr>
+                <td></td>
+                <td></td>
+                <td>......,Ngày <span class="red">{{ "now"|date("d") }}</span> tháng <span class="red">{{ "now"|date("m") }}</span> năm <span
+                        class="red">{{ "now"|date("Y") }}</span></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><strong>Giám đốc</strong><br>( ký, họ tên)</td>
+            </tr>
+        </table>
+    </div>
+    <div class="description">
+        <p>Vào sổ số:{% if record.slug_nganh == 'ho-ly' %}HL{% elseif record.slug_nganh == 'san-xuat' %}SX{% endif %} .....................</p>
+    </div>
+    <div class="footer">
+        <table>
+            <tr>
+                <td>
+                    <img src="plugins/renatio/dynamicpdf/assets/mail.png">
+                    <span>contact@dgnozomi.com.vn</span>
+                </td>
+                <td><img src="plugins/renatio/dynamicpdf/assets/globe.png">dgnozomi.com.vn</td>
+            </tr>
+            <tr>
+                <td><img src="plugins/renatio/dynamicpdf/assets/facebook.png">Xuất khẩu lao động Nhật Bản - DG Nozomi
+                </td>
+                <td><img src="plugins/renatio/dynamicpdf/assets/phone.png">Xuất khẩu lao động Nhật Bản - DG Nozomi</td>
+                <td><img src="plugins/renatio/dynamicpdf/assets/location.png">Xuất khẩu lao động Nhật Bản - DG Nozomi
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- 2 -->
     <div class="table-cer">
         <table class="logo">
             <tr>
@@ -218,105 +318,7 @@
         </table>
     </div>
 {% endfor %}
-    <!-- Ngành SX -->
-    <div class="table-cer">
-        <table class="logo">
-            <tr>
-                <td><img src="plugins/renatio/dynamicpdf/assets/logo.png" width="180px"></td>
-                <td>
-                    <h4 style="margin-top:-50px;text-align: center;">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM <br> <span
-                            style="text-decoration: underline;">Độc lập - Tự do - Hạnh phúc</span></h4>
-                </td>
-            </tr>
-            <tr>
-                <td class="avatar"></td>
-                <td class="background">
-                    <h2 style="margin-top:-40px;text-align: center;">CHỨNG CHỈ ĐÀO TẠO NGHIỆP VỤ<br> NGOẠI NGỮ VÀ KIẾN
-                        THỨC CẦN THIẾT
-                    </h2>
-                    <p style="text-align: center;margin:0;">(Dành cho Thực tập sinh kỹ năng tại Nhật Bản)</p>
-                    <table class="information">
-                        <tr>
-                            <td class="left-info" style="width:44%;">Cấp cho </td>
-                            <td colspan="2" class="fill-info">
-                                <span>: Hoàng thị huyền</span>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="left-info">Sinh ngày </td>
-                            <td class="fill-info">
-                                <span>: Hoàng thị huyền</span>
-
-                            </td>
-                            <td class="left-info">Nơi sinh </td>
-                            <td class="fill-info">
-                                <span>: Hoàng thị huyền</span>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="left-info">Số CMND</td>
-                            <td colspan="2" class="fill-info">
-                                <span>: Hoàng thị huyền</span>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="left-info">Quê quán </td>
-                            <td colspan="2" class="fill-info">
-                                <span>: Hoàng thị huyền</span>
-
-                            </td>
-                        </tr>
-
-                    </table>
-                </td>
-            </tr>
-        </table>
-        <div class="description">
-            <p style="font-size:12px;font-weight:bold;">Đã hoàn thành chương trình đạo tạo 400 giờ nghiệp vụ, 1100 giờ
-                ngoại ngữ và 76 giờ kiến thức cần thiết
-                trước khi sang Nhật Bản thực hiện chương trình Thực tập sinh kỹ năng</p>
-            <p style="font-size:12px;margin:0;padding:0;">Thời gian đào tạo : Từ 20/01/2020 đến 30/06/2020 </p>
-        </div>
-
-
-        <table class="sign">
-            <tr>
-                <td></td>
-                <td></td>
-                <td>......,Ngày <span class="red">17</span> tháng <span class="red">9</span> năm <span
-                        class="red">2020</span></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td><strong>Giám đốc</strong><br>( ký, họ tên)</td>
-            </tr>
-        </table>
-    </div>
-    <div class="description">
-        <p>Vào sổ số:SX .....................</p>
-    </div>
-    <div class="footer">
-        <table>
-            <tr>
-                <td>
-                    <img src="plugins/renatio/dynamicpdf/assets/mail.png">
-                    <span>contact@dgnozomi.com.vn</span>
-                </td>
-                <td><img src="plugins/renatio/dynamicpdf/assets/globe.png">dgnozomi.com.vn</td>
-            </tr>
-            <tr>
-                <td><img src="plugins/renatio/dynamicpdf/assets/facebook.png">Xuất khẩu lao động Nhật Bản - DG Nozomi
-                </td>
-                <td><img src="plugins/renatio/dynamicpdf/assets/phone.png">Xuất khẩu lao động Nhật Bản - DG Nozomi</td>
-                <td><img src="plugins/renatio/dynamicpdf/assets/location.png">Xuất khẩu lao động Nhật Bản - DG Nozomi
-                </td>
-            </tr>
-        </table>
-    </div>
+    
 </body>
 
 </html>

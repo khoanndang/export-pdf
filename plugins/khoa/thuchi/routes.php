@@ -72,16 +72,14 @@
             $new = new Warehouse();
             $new->ma_kho = 'CODE_'.$i;
             $new->type = $b[$random_string];
-            $new->full_name = 'Nguyễn Văn A';
-            $new->theo = 'Nguyễn Văn A';
-            $new->thoi_gian = Carbon::now();
-            $new->cua = 'Nguyễn Văn A';
-            $new->dia_chi = 'HCM';
-            $new->tai_kho = 'HCM';
-            $new->dia_diem = 'HCM';
-            $new->json_data = json_decode('[{"name_field":"test 1","ma_so":"001","don_vi_tinh":"m3","theo_chung_tu":"ABC 1","thuc_nhap":"100000","don_gia":"100000","thanh_tien":"100000"},{"name_field":"test 2","ma_so":"002","don_vi_tinh":"m2","theo_chung_tu":"ABC 2","thuc_nhap":"200000","don_gia":"200000","thanh_tien":"200000"},{"name_field":"test 3","ma_so":"003","don_vi_tinh":"m1","theo_chung_tu":"ABC 3","thuc_nhap":"300000","don_gia":"300000","thanh_tien":"300000"}]');
+            if ($b[$random_string] == 0) {
+                $new->json_data_xuat = json_decode('[{"ma_so":"Code001","ten_nhan_hieu":"ABC 1","quy_cach_vat_tu":"ABC 1","dung_cu_hang_hoa":"ABC 1","nha_cung_cap":"ABC 1","don_vi_tinh":"m1","so_luong_nhap":"100","don_gia":"100","thanh_tien":"1000","ly_do_xuat_khau":"ABC 1","ho_ten_nguoi_nhan":"ABC 1"},{"ma_so":"Code 002","ten_nhan_hieu":"ABC 2","quy_cach_vat_tu":"ABC 2","dung_cu_hang_hoa":"ABC 2","nha_cung_cap":"ABC 2","don_vi_tinh":"m2","so_luong_nhap":"200","don_gia":"200","thanh_tien":"2000","ly_do_xuat_khau":"ABC 2","ho_ten_nguoi_nhan":"ABC 2"},{"ma_so":"Code 003","ten_nhan_hieu":"ABC 3","quy_cach_vat_tu":"ABC 3","dung_cu_hang_hoa":"ABC 3","nha_cung_cap":"ABC 3","don_vi_tinh":"m3","so_luong_nhap":"300","don_gia":"300","thanh_tien":"3000","ly_do_xuat_khau":"ABC 3","ho_ten_nguoi_nhan":"ABC 3"}]');
+            } else {
+                $new->json_data_nhap = json_decode('[{"ma_so":"Nhap001","ten_nhan_hieu":"CDE001","quy_cach_vat_tu":"CDE001","dung_cu_hang_hoa":"CDE001","nha_cung_cap":"m1","don_vi_tinh":"100","so_luong_nhap":"100","don_gia":"100","thanh_tien":"1000"},{"ma_so":"Nhap002","ten_nhan_hieu":"CDE002","quy_cach_vat_tu":"CDE002","dung_cu_hang_hoa":"CDE002","nha_cung_cap":"CDE002","don_vi_tinh":"m2","so_luong_nhap":"200","don_gia":"200","thanh_tien":"2000"},{"ma_so":"Nhap003","ten_nhan_hieu":"CDE003","quy_cach_vat_tu":"CDE003","dung_cu_hang_hoa":"CDE003","nha_cung_cap":"CDE003","don_vi_tinh":"m3","so_luong_nhap":"300","don_gia":"300","thanh_tien":"3000"}]');
+                
+            }
+            
             $new->ngay_xuat_phieu = Carbon::now();
-            $new->ly_do = 'ABC';
             $new->tong_so_tien_viet_bang_chu = 'Một trăm tỷ';
             $new->so_chung_tu_goc_kem_theo = 99;
             $new->save();

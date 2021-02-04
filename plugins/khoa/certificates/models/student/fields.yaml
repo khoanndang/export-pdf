@@ -12,9 +12,9 @@ fields:
         placeholder: 'Nhập CMND'
         type: text
     que_quan:
-        label: 'Quê quán'
+        label: 'Địa chỉ thường trú'
         span: auto
-        placeholder: 'Nhập quê quán'
+        placeholder: 'Nhập địa chỉ thường trú'
         type: text
     noi_sinh:
         label: 'Nơi sinh'
@@ -22,7 +22,7 @@ fields:
         placeholder: 'Nhập nơi sinh'
         type: text
     noi_cap:
-        label: 'Nơi cấp'
+        label: 'Nơi cấp CMND'
         span: auto
         placeholder: 'Nhập nơi cấp'
         type: text

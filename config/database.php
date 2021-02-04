@@ -57,7 +57,7 @@ return [
             'engine'     => 'InnoDB',
             'host'       => 'localhost',
             'port'       => 3306,
-            'database'   => 'dunggiang',
+            'database'   => 'export_certificate',
             'username'   => 'root',
             'password'   => '',
             'charset'    => 'utf8mb4',
