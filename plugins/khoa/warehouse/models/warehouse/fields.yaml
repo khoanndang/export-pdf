@@ -46,15 +46,7 @@ tabs:
                         span: auto
                         type: text
                     ten_nhan_hieu:
-                        label: 'Tên nhãn hiệu'
-                        span: auto
-                        type: text
-                    quy_cach_vat_tu:
-                        label: 'Quy cách vật tư'
-                        span: auto
-                        type: text
-                    dung_cu_hang_hoa:
-                        label: 'Dụng cụ & hàng hóa'
+                        label: 'Tên nhãn hiệu, quy cách vật tư, dụng cụ & hàng hóa'
                         span: auto
                         type: text
                     nha_cung_cap:
@@ -91,15 +83,7 @@ tabs:
                         span: auto
                         type: text
                     ten_nhan_hieu:
-                        label: 'Tên nhãn hiệu'
-                        span: auto
-                        type: text
-                    quy_cach_vat_tu:
-                        label: 'Quy cách vật tư'
-                        span: auto
-                        type: text
-                    dung_cu_hang_hoa:
-                        label: 'Dụng cụ & hàng hóa'
+                        label: 'Tên nhãn hiệu, quy cách vật tư, dụng cụ & hàng hóa'
                         span: auto
                         type: text
                     nha_cung_cap:
