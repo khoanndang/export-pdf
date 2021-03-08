@@ -3,8 +3,8 @@ columns:
         label: '#'
         type: number
         sortable: true
-    ma_kho:
-        label: 'Mã kho'
+    ma_phieu:
+        label: 'Mã phiếu'
         type: text
     ngay_xuat_phieu:
         label: 'Ngày xuất phiếu'

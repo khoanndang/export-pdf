@@ -1,6 +1,7 @@
 <?php namespace Khoa\Warehouse\Models;
 
 use Model;
+use Carbon\Carbon;
 
 /**
  * Model
@@ -21,7 +22,7 @@ class Warehouse extends Model
      * @var array Validation rules
      */
     public $rules = [
-        'ma_kho' => 'required|unique:khoa_warehouse_warehouses',
+        // 'ma_kho' => 'required|unique:khoa_warehouse_warehouses',
         'type' => 'required',
         'ngay_xuat_phieu' =>'required',
         'tong_so_tien_viet_bang_chu' => 'required',
@@ -58,5 +59,33 @@ class Warehouse extends Model
         //     $fields->json_data_xuat->hidden = false;
         //     return;
         // }
+    }
+
+    public function beforeCreate() {
+        //generate ma_phieu
+        $year = Carbon::today()->format('y');
+        $month = Carbon::today()->format('m');
+        $now = Carbon::now();
+        $firstDayOfMonth = Carbon::now()->firstOfMonth();
+        $all_data = Warehouse::whereBetween('created_at',[$firstDayOfMonth, $now])->count();
+        $all_data = $all_data + 1;
+        if ($all_data >= 1 && $all_data <= 9) {
+            $all_data = "000$all_data";
+        } elseif ($all_data >= 10 && $all_data <= 99) {
+            $all_data = "00$all_data";
+        } elseif ($all_data >= 100 && $all_data <= 999) {
+            $all_data = "0$all_data";
+        } else {
+            $all_data = $all_data;
+        }
+        if ($this->type == "0") {
+            $lp = "XK";
+        } elseif ($this->type == "1") {
+            $lp = "NK";
+        }
+        $ma_phieu = "$lp-$year$month-$all_data";
+        
+        $this->ma_phieu = $ma_phieu;
+        
     }
 }

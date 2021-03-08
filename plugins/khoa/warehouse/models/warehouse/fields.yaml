@@ -1,8 +1,12 @@
 tabs:
     fields:
-        ma_kho:
-            label: 'Mã kho'
+        ma_phieu:
+            label: 'Mã phiếu'
             span: auto
+            readOnly: 1
+            context:
+                - update
+                - preview
             type: text
             tab: 'Thông tin chung'
         type:
@@ -31,6 +35,16 @@ tabs:
             label: 'Số chứng từ gốc kèm theo'
             span: auto
             type: text
+            tab: 'Thông tin chung'
+        payment_type:
+            label: 'Hình thức thanh toán'
+            options:
+                - 'Chuyển khoản'
+                - 'Tiền mặt'
+            showSearch: true
+            span: auto
+            placeholder: '-- Chọn hình thức thanh toán --'
+            type: dropdown
             tab: 'Thông tin chung'
         json_data_nhap:
             label: 'Thông tin nhập'

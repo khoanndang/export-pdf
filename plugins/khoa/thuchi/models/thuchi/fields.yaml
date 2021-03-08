@@ -1,18 +1,21 @@
 fields:
-    nienkhoa:
-        label: 'Niên khóa'
-        nameFrom: name
-        descriptionFrom: description
+    ma_phieu:
+        label: 'Mã phiếu'
         span: auto
-        type: relation
-        placeholder: '-- Chọn niên khóa --'
-    thuctapsinh_id:
+        disabled: 0
+        readOnly: 1
+        context:
+            - update
+            - preview
+        type: text
+    full_name:
         label: 'Họ tên'
-        showSearch: true
         span: auto
-        placeholder: '-- Chọn thực tập sinh --'
-        type: dropdown
-        dependsOn: nienkhoa
+        type: text
+    cmnd:
+        label: CMND
+        span: auto
+        type: text
     so_tien:
         label: 'Số tiền (VNĐ)'
         span: auto
@@ -35,6 +38,15 @@ fields:
         label: 'Kèm theo'
         span: auto
         type: text
+    payment_type:
+        label: 'Hình thức thanh toán'
+        options:
+            - 'Chuyển khoản'
+            - 'Tiền mặt'
+        showSearch: true
+        placeholder: '-- Chọn hình thức thanh toán --'
+        span: auto
+        type: dropdown
     type:
         label: 'Loại phiếu'
         span: auto

@@ -2,6 +2,7 @@
 
 use Model;
 use Khoa\Certificates\Models\Student;
+use Carbon\Carbon;
 
 /**
  * Model
@@ -20,7 +21,8 @@ class Thuchi extends Model
      * @var array Validation rules
      */
     public $rules = [
-        'thuctapsinh_id' => 'required',
+        // 'thuctapsinh_id' => 'required',
+        'full_name' => 'required',
         'so_tien' => 'required',
         'viet_bang_chu' => 'required',
         'address' => 'required',
@@ -66,10 +68,36 @@ class Thuchi extends Model
         
     }
 
-    public function beforeSave() {
-        $student = Student::find($this->thuctapsinh_id);
-        $this->full_name = $student->ho_ten;
-        $this->cmnd = $student->cmnd;
+    public function beforeCreate() {
+        // $student = Student::find($this->thuctapsinh_id);
+        // $this->full_name = $student->ho_ten;
+        // $this->cmnd = $student->cmnd;
+
+        //generate ma_phieu
+        $year = Carbon::today()->format('y');
+        $month = Carbon::today()->format('m');
+        $now = Carbon::now();
+        $firstDayOfMonth = Carbon::now()->firstOfMonth();
+        $all_data = Thuchi::whereBetween('created_at',[$firstDayOfMonth, $now])->count();
+        $all_data = $all_data + 1;
+        if ($all_data >= 1 && $all_data <= 9) {
+            $all_data = "000$all_data";
+        } elseif ($all_data >= 10 && $all_data <= 99) {
+            $all_data = "00$all_data";
+        } elseif ($all_data >= 100 && $all_data <= 999) {
+            $all_data = "0$all_data";
+        } else {
+            $all_data = $all_data;
+        }
+        if ($this->type == "0") {
+            $lp = "PT";
+        } elseif ($this->type == "1") {
+            $lp = "PC";
+        }
+        $ma_phieu = "$lp-$year$month-$all_data";
+        
+        $this->ma_phieu = $ma_phieu;
+        
     }
 
     public function getTypeOptions() {

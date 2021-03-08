@@ -10,11 +10,11 @@ columns:
     cmnd:
         label: CMND
         type: text
-    nienkhoa:
-        label: 'Niên khóa'
-        type: partial
-        searchable: false
-        path: $/khoa/thuchi/models/thuchi/_nienkhoa.htm
+    # nienkhoa:
+    #     label: 'Niên khóa'
+    #     type: partial
+    #     searchable: false
+    #     path: $/khoa/thuchi/models/thuchi/_nienkhoa.htm
     type:
         label: 'Loại phiếu'
         type: partial
