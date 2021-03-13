@@ -99,11 +99,15 @@ class Warehouse extends Model
         } elseif ($this->type == "0") {
             $all_json_data = $this->json_data_xuat;
         }
-        foreach ($all_json_data as $json_data) {
-            // dd(intval($json_data['thanh_tien']));
-            $total_don_gia = $total_don_gia + intval($json_data['don_gia']);
-            $total_thanh_tien = $total_thanh_tien + intval($json_data['thanh_tien']);
+
+        if (count($all_json_data) > 0) {
+            foreach ($all_json_data as $json_data) {
+                // dd(intval($json_data['thanh_tien']));
+                $total_don_gia = $total_don_gia + intval($json_data['don_gia']);
+                $total_thanh_tien = $total_thanh_tien + intval($json_data['thanh_tien']);
+            }
         }
+        
         $this->total_don_gia = $total_don_gia;
         $this->total_thanh_tien = $total_thanh_tien;
     }
