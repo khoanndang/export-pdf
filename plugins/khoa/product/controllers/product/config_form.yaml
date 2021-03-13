@@ -1,0 +1,10 @@
+name: Product
+form: $/khoa/product/models/product/fields.yaml
+modelClass: Khoa\Product\Models\Product
+defaultRedirect: khoa/product/product
+create:
+    redirect: 'khoa/product/product/update/:id'
+    redirectClose: khoa/product/product
+update:
+    redirect: khoa/product/product
+    redirectClose: khoa/product/product

@@ -1,0 +1,32 @@
+columns:
+    id:
+        label: id
+        type: number
+        sortable: true
+    ma_so:
+        label: ma_so
+        type: text
+    ten_nhan_hieu:
+        label: ten_nhan_hieu
+        type: text
+        searchable: true
+    nha_cung_cap:
+        label: nha_cung_cap
+        type: text
+        searchable: true
+    don_vi_tinh:
+        label: don_vi_tinh
+        type: text
+        invisible: true
+    don_gia:
+        label: don_gia
+        type: text
+        invisible: true
+    created_at:
+        label: created_at
+        type: datetime
+        invisible: true
+    updated_at:
+        label: updated_at
+        type: datetime
+        invisible: true
