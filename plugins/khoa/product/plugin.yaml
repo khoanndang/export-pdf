@@ -1,0 +1,11 @@
+plugin:
+    name: 'khoa.product::lang.plugin.name'
+    description: 'khoa.product::lang.plugin.description'
+    author: Khoa
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Sản phẩm'
+        url: khoa/product/product
+        icon: icon-list-alt

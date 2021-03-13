@@ -2,6 +2,7 @@
 
 use Model;
 use Carbon\Carbon;
+use Khoa\Product\Models\Product;
 
 /**
  * Model
@@ -29,6 +30,10 @@ class Warehouse extends Model
         'so_chung_tu_goc_kem_theo' => 'required'
     ];
 
+    public $belongsTo = [
+        'product' => ['Khoa\Product\Models\Product', 'key' => 'ma_so', 'otherKey' => 'ma_so']
+    ];
+
     /**
      * CONSTANT
      */
@@ -48,20 +53,20 @@ class Warehouse extends Model
 
     public function filterFields($fields, $context = null)
     {
-        // $fields->json_data_nhap->hidden = true; 
-        // $fields->json_data_xuat->hidden = true; 
-        
-        // if ($fields->type->value == "0") {
-        //     $fields->json_data_nhap->hidden = false;
-        //     return;
+        // dd($fields->json_data_nhap);
+        // if ($fields->json_data_nhap) {
+        //     foreach ($fields->json_data_nhap as $line) {
+        //         $fields->{'json_data_nhap[ten_nhan_hieu]'}->value = $line;
+        //     }
+            
         // }
-        // if ($fields->type->value == "1") {
-        //     $fields->json_data_xuat->hidden = false;
+        // dd($this->ma_so);
+        // if (empty($this->ma_so))
         //     return;
-        // }
     }
 
     public function beforeCreate() {
+        // dd($this->json_data_nhap);
         //generate ma_phieu
         $year = Carbon::today()->format('y');
         $month = Carbon::today()->format('m');
@@ -110,5 +115,45 @@ class Warehouse extends Model
         
         $this->total_don_gia = $total_don_gia;
         $this->total_thanh_tien = $total_thanh_tien;
+    }
+
+    public function getMaSoOptions() {
+        return Product::all()->lists('ma_so','ma_so');
+    }
+
+    public function getTenNhanHieuOptions($value, $data) {
+        $product = isset($data->product) ? $data->product : null;
+        if ($product != null) {
+            return Product::where('ma_so', $product)->lists('ten_nhan_hieu', 'ten_nhan_hieu');
+        }
+        
+        return ['',''];
+    }
+
+    public function getNhaCungCapOptions($value, $data) {
+        $product = isset($data->product) ? $data->product : null;
+        if ($product != null) {
+            return Product::where('ma_so', $product)->lists('nha_cung_cap', 'nha_cung_cap');
+        }
+        
+        return ['',''];
+    }
+
+    public function getDonViTinhOptions($value, $data) {
+        $product = isset($data->product) ? $data->product : null;
+        if ($product != null) {
+            return Product::where('ma_so', $product)->lists('don_vi_tinh', 'don_vi_tinh');
+        }
+        
+        return ['',''];
+    }
+
+    public function getDonGiaOptions($value, $data) {
+        $product = isset($data->product) ? $data->product : null;
+        if ($product != null) {
+            return Product::where('ma_so', $product)->lists('don_gia', 'don_gia');
+        }
+        
+        return ['',''];
     }
 }
