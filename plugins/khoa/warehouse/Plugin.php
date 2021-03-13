@@ -19,7 +19,10 @@ class Plugin extends PluginBase
                 'jsonDecode' => function ($json) {
                     return json_decode($json, true);
                 },
-            ]
+            ],
+            'numberFormat' => function ($data) {
+                return number_format($data, "0",",",".");
+            },
         ];
     }
 }

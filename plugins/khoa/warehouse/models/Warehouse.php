@@ -88,4 +88,23 @@ class Warehouse extends Model
         $this->ma_phieu = $ma_phieu;
         
     }
+
+    public function beforeSave() {
+        $total_don_gia = 0;
+        $total_thanh_tien = 0;
+
+        //Nhap - xuat
+        if ($this->type == "1") {
+            $all_json_data = $this->json_data_nhap;
+        } elseif ($this->type == "0") {
+            $all_json_data = $this->json_data_xuat;
+        }
+        foreach ($all_json_data as $json_data) {
+            // dd(intval($json_data['thanh_tien']));
+            $total_don_gia = $total_don_gia + intval($json_data['don_gia']);
+            $total_thanh_tien = $total_thanh_tien + intval($json_data['thanh_tien']);
+        }
+        $this->total_don_gia = $total_don_gia;
+        $this->total_thanh_tien = $total_thanh_tien;
+    }
 }

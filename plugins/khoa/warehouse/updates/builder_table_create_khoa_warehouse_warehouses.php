@@ -20,6 +20,9 @@ class BuilderTableCreateKhoaWarehouseWarehouses extends Migration
             
             $table->text('json_data_nhap')->nullable();
             $table->text('json_data_xuat')->nullable();
+
+            $table->double('total_don_gia')->default(0);
+            $table->double('total_thanh_tien')->default(0);
             
             $table->smallInteger('payment_type')->default(0)->comment('0: CHUYỂN KHOẢN, 1: TIỀN MẶT');
             $table->timestamp('created_at')->nullable();

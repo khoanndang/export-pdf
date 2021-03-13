@@ -89,4 +89,14 @@
         return 'Seeding warehouse success';
     });
 
+    Route::get('/test',function(){
+        $warehouse = Warehouse::find(3);
+        $total = 0;
+        foreach ($warehouse->json_data_xuat as $ware) {
+            $total = $total + intval($ware['don_gia']);
+            // dd(intval($ware['don_gia']));
+        }
+        dd($total);
+    });
+
 ?>

@@ -26,11 +26,6 @@ tabs:
             type: datepicker
             tab: 'Thông tin chung'
             format: d/m/Y
-        tong_so_tien_viet_bang_chu:
-            label: 'Tổng số tiền (viết bằng chữ)'
-            span: auto
-            type: text
-            tab: 'Thông tin chung'
         so_chung_tu_goc_kem_theo:
             label: 'Số chứng từ gốc kèm theo'
             span: auto
@@ -128,3 +123,8 @@ tabs:
                         label: 'Họ tên người nhận'
                         span: auto
                         type: text
+        tong_so_tien_viet_bang_chu:
+            label: 'Tổng số tiền (Viết bằng chữ))'
+            span: full
+            type: text
+            tab: Tổng
