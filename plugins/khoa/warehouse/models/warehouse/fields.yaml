@@ -50,28 +50,22 @@ tabs:
             dependsOn: type
             form:
                 fields:
-                    product:
+                    ma_so:
                         label: 'Mã số'
-                        nameFrom: ma_so
-                        descriptionFrom: description
                         span: auto
-                        type: relation
-                        placeholder: '-- Chọn mã số sản phẩm --'
+                        type: text
                     ten_nhan_hieu:
                         label: 'Tên nhãn hiệu, quy cách vật tư, dụng cụ & hàng hóa'
                         span: auto
-                        dependsOn: product
-                        type: dropdown
+                        type: text
                     nha_cung_cap:
                         label: 'Nhà cung cấp'
                         span: auto
-                        dependsOn: product
-                        type: dropdown
+                        type: text
                     don_vi_tinh:
                         label: 'Đơn vị tính'
                         span: auto
-                        dependsOn: product
-                        type: dropdown
+                        type: text
                     so_luong_nhap:
                         label: 'Số lượng nhập'
                         span: auto
@@ -79,8 +73,7 @@ tabs:
                     don_gia:
                         label: 'Đơn giá'
                         span: auto
-                        dependsOn: product
-                        type: dropdown
+                        type: text
                     thanh_tien:
                         label: 'Thành tiền'
                         span: auto
@@ -94,28 +87,22 @@ tabs:
             dependsOn: type
             form:
                 fields:
-                    product:
+                    ma_so:
                         label: 'Mã số'
-                        nameFrom: ma_so
-                        descriptionFrom: description
                         span: auto
-                        type: relation
-                        placeholder: '-- Chọn mã số sản phẩm --'
+                        type: text
                     ten_nhan_hieu:
                         label: 'Tên nhãn hiệu, quy cách vật tư, dụng cụ & hàng hóa'
                         span: auto
-                        dependsOn: product
-                        type: dropdown
+                        type: text
                     nha_cung_cap:
                         label: 'Nhà cung cấp'
                         span: auto
-                        dependsOn: product
-                        type: dropdown
+                        type: text
                     don_vi_tinh:
                         label: 'Đơn vị tính'
                         span: auto
-                        dependsOn: product
-                        type: dropdown
+                        type: text
                     so_luong_nhap:
                         label: 'Số lượng nhập'
                         span: auto
@@ -123,8 +110,7 @@ tabs:
                     don_gia:
                         label: 'Đơn giá'
                         span: auto
-                        dependsOn: product
-                        type: dropdown
+                        type: text
                     thanh_tien:
                         label: 'Thành tiền'
                         span: auto
