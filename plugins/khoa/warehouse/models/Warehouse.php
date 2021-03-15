@@ -72,7 +72,15 @@ class Warehouse extends Model
         $month = Carbon::today()->format('m');
         $now = Carbon::now();
         $firstDayOfMonth = Carbon::now()->firstOfMonth();
-        $all_data = Warehouse::whereBetween('created_at',[$firstDayOfMonth, $now])->count();
+        $all_data = Warehouse::whereBetween('created_at',[$firstDayOfMonth, $now]);
+        if ($this->type == "0") {
+            $lp = "XK";
+            $type = Warehouse::XUAT;
+        } elseif ($this->type == "1") {
+            $lp = "NK";
+            $type = Warehouse::NHAP;
+        }
+        $all_data = $all_data->where('type',$type)->count();
         $all_data = $all_data + 1;
         if ($all_data >= 1 && $all_data <= 9) {
             $all_data = "000$all_data";
@@ -83,11 +91,7 @@ class Warehouse extends Model
         } else {
             $all_data = $all_data;
         }
-        if ($this->type == "0") {
-            $lp = "XK";
-        } elseif ($this->type == "1") {
-            $lp = "NK";
-        }
+        
         $ma_phieu = "$lp-$year$month-$all_data";
         
         $this->ma_phieu = $ma_phieu;

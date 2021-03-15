@@ -78,7 +78,15 @@ class Thuchi extends Model
         $month = Carbon::today()->format('m');
         $now = Carbon::now();
         $firstDayOfMonth = Carbon::now()->firstOfMonth();
-        $all_data = Thuchi::whereBetween('created_at',[$firstDayOfMonth, $now])->count();
+        $all_data = Thuchi::whereBetween('created_at',[$firstDayOfMonth, $now]);
+        if ($this->type == "0") {
+            $lp = "PT";
+            $type = Thuchi::THU;
+        } elseif ($this->type == "1") {
+            $lp = "PC";
+            $type = Thuchi::CHI;
+        }
+        $all_data = $all_data->where('type',$type)->count();
         $all_data = $all_data + 1;
         if ($all_data >= 1 && $all_data <= 9) {
             $all_data = "000$all_data";
@@ -89,11 +97,7 @@ class Thuchi extends Model
         } else {
             $all_data = $all_data;
         }
-        if ($this->type == "0") {
-            $lp = "PT";
-        } elseif ($this->type == "1") {
-            $lp = "PC";
-        }
+        
         $ma_phieu = "$lp-$year$month-$all_data";
         
         $this->ma_phieu = $ma_phieu;
