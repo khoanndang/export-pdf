@@ -126,15 +126,15 @@ tabs:
         total_thanh_tien:
             label: 'Tổng số tiền '
             span: full
-            type: number
-            readOnly: 1
+            readOnly: 0
             context:
                 - update
                 - preview
+            disabled: 1
+            type: number
             tab: Tổng
         tong_so_tien_viet_bang_chu:
             label: 'Tổng số tiền (Viết bằng chữ))'
             span: full
             type: text
             tab: Tổng
-
