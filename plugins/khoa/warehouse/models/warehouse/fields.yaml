@@ -123,8 +123,18 @@ tabs:
                         label: 'Họ tên người nhận'
                         span: auto
                         type: text
+        total_thanh_tien:
+            label: 'Tổng số tiền '
+            span: full
+            type: number
+            readOnly: 1
+            context:
+                - update
+                - preview
+            tab: Tổng
         tong_so_tien_viet_bang_chu:
             label: 'Tổng số tiền (Viết bằng chữ))'
             span: full
             type: text
             tab: Tổng
+

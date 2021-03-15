@@ -26,7 +26,7 @@ class Warehouse extends Model
         // 'ma_kho' => 'required|unique:khoa_warehouse_warehouses',
         'type' => 'required',
         'ngay_xuat_phieu' =>'required',
-        'tong_so_tien_viet_bang_chu' => 'required',
+        // 'tong_so_tien_viet_bang_chu' => 'required',
         'so_chung_tu_goc_kem_theo' => 'required'
     ];
 
