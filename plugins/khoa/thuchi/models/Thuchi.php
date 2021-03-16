@@ -74,8 +74,9 @@ class Thuchi extends Model
         // $this->cmnd = $student->cmnd;
 
         //generate ma_phieu
-        $year = Carbon::parse($this->ngay_xuat_phieu)->format('y');
-        $month = Carbon::parse($this->ngay_xuat_phieu)->format('m');
+        $time = $this->ngay_xuat_phieu;
+        $year = Carbon::parse($time)->format('y');
+        $month = Carbon::parse($time)->format('m');
         $now = Carbon::now();
         $firstDayOfMonth = Carbon::now()->firstOfMonth();
         $all_data = Thuchi::whereBetween('created_at',[$firstDayOfMonth, $now]);
