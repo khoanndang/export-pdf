@@ -68,8 +68,9 @@ class Warehouse extends Model
     public function beforeCreate() {
         // dd($this->json_data_nhap);
         //generate ma_phieu
-        $year = Carbon::today()->format('y');
-        $month = Carbon::today()->format('m');
+        $time = $this->ngay_xuat_phieu;
+        $year = Carbon::parse($time)->format('y');
+        $month = Carbon::parse($time)->format('m');
         $now = Carbon::now();
         $firstDayOfMonth = Carbon::now()->firstOfMonth();
         $all_data = Warehouse::whereBetween('created_at',[$firstDayOfMonth, $now]);
