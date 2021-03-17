@@ -27,7 +27,8 @@ class Warehouse extends Model
         'type' => 'required',
         'ngay_xuat_phieu' =>'required',
         // 'tong_so_tien_viet_bang_chu' => 'required',
-        'so_chung_tu_goc_kem_theo' => 'required'
+        'so_chung_tu_goc_kem_theo' => 'required',
+        'ma_phieu' => 'unique:khoa_warehouse_warehouses'
     ];
 
     public $belongsTo = [
@@ -69,11 +70,15 @@ class Warehouse extends Model
         // dd($this->json_data_nhap);
         //generate ma_phieu
         $time = $this->ngay_xuat_phieu;
+
         $year = Carbon::parse($time)->format('y');
         $month = Carbon::parse($time)->format('m');
-        $now = Carbon::now();
-        $firstDayOfMonth = Carbon::now()->firstOfMonth();
-        $all_data = Warehouse::whereBetween('created_at',[$firstDayOfMonth, $now]);
+
+        $firstDayOfMonth = Carbon::parse($time)->firstOfMonth();
+        $lastDayOfMonth = Carbon::parse($time)->lastOfMonth();
+
+        $all_data = Warehouse::whereBetween('ngay_xuat_phieu',[$firstDayOfMonth, $lastDayOfMonth]);
+
         if ($this->type == "0") {
             $lp = "XK";
             $type = Warehouse::XUAT;
@@ -83,6 +88,7 @@ class Warehouse extends Model
         }
         $all_data = $all_data->where('type',$type)->count();
         $all_data = $all_data + 1;
+
         if ($all_data >= 1 && $all_data <= 9) {
             $all_data = "000$all_data";
         } elseif ($all_data >= 10 && $all_data <= 99) {

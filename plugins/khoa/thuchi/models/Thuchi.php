@@ -28,6 +28,7 @@ class Thuchi extends Model
         'address' => 'required',
         'ngay_xuat_phieu' => 'required',
         'type' => 'required',
+        'ma_phieu' => 'unique:khoa_thuchi_thuchis',
     ];
 
     /**
@@ -77,9 +78,11 @@ class Thuchi extends Model
         $time = $this->ngay_xuat_phieu;
         $year = Carbon::parse($time)->format('y');
         $month = Carbon::parse($time)->format('m');
-        $now = Carbon::now();
-        $firstDayOfMonth = Carbon::now()->firstOfMonth();
-        $all_data = Thuchi::whereBetween('created_at',[$firstDayOfMonth, $now]);
+        
+        $firstDayOfMonth = Carbon::parse($time)->firstOfMonth();
+        $lastDayOfMonth = Carbon::parse($time)->lastOfMonth();
+
+        $all_data = Thuchi::whereBetween('ngay_xuat_phieu',[$firstDayOfMonth, $lastDayOfMonth]);
         if ($this->type == "0") {
             $lp = "PT";
             $type = Thuchi::THU;
@@ -89,6 +92,7 @@ class Thuchi extends Model
         }
         $all_data = $all_data->where('type',$type)->count();
         $all_data = $all_data + 1;
+        
         if ($all_data >= 1 && $all_data <= 9) {
             $all_data = "000$all_data";
         } elseif ($all_data >= 10 && $all_data <= 99) {
