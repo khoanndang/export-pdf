@@ -16,9 +16,11 @@ tabs:
                 - Nhập
             showSearch: true
             span: auto
+            placeholder: '-- Chọn loại hình --'
+            context:
+                - create
             type: dropdown
             tab: 'Thông tin chung'
-            placeholder: '-- Chọn loại hình --'
         ngay_xuat_phieu:
             label: 'Ngày xuất phiếu'
             mode: date
@@ -41,12 +43,27 @@ tabs:
             placeholder: '-- Chọn hình thức thanh toán --'
             type: dropdown
             tab: 'Thông tin chung'
+        total_thanh_tien:
+            label: 'Tổng số tiền '
+            span: auto
+            readOnly: 0
+            context:
+                - update
+                - preview
+            disabled: 1
+            type: number
+            tab: 'Thông tin chung'
+        tong_so_tien_viet_bang_chu:
+            label: 'Tổng số tiền (Viết bằng chữ))'
+            span: auto
+            type: text
+            tab: 'Thông tin chung'
         json_data_nhap:
             label: 'Thông tin nhập'
             prompt: 'Add new item'
             span: full
             type: repeater
-            tab: 'Thông tin nhập (JSON)'
+            tab: 'Thông tin chung'
             dependsOn: type
             form:
                 fields:
@@ -65,8 +82,7 @@ tabs:
                     nha_cung_cap:
                         label: 'Nhà cung cấp'
                         span: auto
-                        dependsOn: product
-                        type: dropdown
+                        type: text
                     don_vi_tinh:
                         label: 'Đơn vị tính'
                         span: auto
@@ -79,8 +95,7 @@ tabs:
                     don_gia:
                         label: 'Đơn giá'
                         span: auto
-                        dependsOn: product
-                        type: dropdown
+                        type: number
                     thanh_tien:
                         label: 'Thành tiền'
                         span: auto
@@ -90,7 +105,7 @@ tabs:
             prompt: 'Add new item'
             span: full
             type: repeater
-            tab: 'Thông tin xuất (JSON)'
+            tab: 'Thông tin chung'
             dependsOn: type
             form:
                 fields:
@@ -99,8 +114,8 @@ tabs:
                         nameFrom: ma_so
                         descriptionFrom: description
                         span: auto
+                        cssClass: col-lg-1
                         type: relation
-                        placeholder: '-- Chọn mã số sản phẩm --'
                     ten_nhan_hieu:
                         label: 'Tên nhãn hiệu, quy cách vật tư, dụng cụ & hàng hóa'
                         span: auto
@@ -109,8 +124,7 @@ tabs:
                     nha_cung_cap:
                         label: 'Nhà cung cấp'
                         span: auto
-                        dependsOn: product
-                        type: dropdown
+                        type: text
                     don_vi_tinh:
                         label: 'Đơn vị tính'
                         span: auto
@@ -123,8 +137,7 @@ tabs:
                     don_gia:
                         label: 'Đơn giá'
                         span: auto
-                        dependsOn: product
-                        type: dropdown
+                        type: number
                     thanh_tien:
                         label: 'Thành tiền'
                         span: auto
@@ -137,18 +150,3 @@ tabs:
                         label: 'Họ tên người nhận'
                         span: auto
                         type: text
-        total_thanh_tien:
-            label: 'Tổng số tiền '
-            span: full
-            readOnly: 0
-            context:
-                - update
-                - preview
-            disabled: 1
-            type: number
-            tab: Tổng
-        tong_so_tien_viet_bang_chu:
-            label: 'Tổng số tiền (Viết bằng chữ))'
-            span: full
-            type: text
-            tab: Tổng

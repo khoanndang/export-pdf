@@ -141,14 +141,14 @@ class Warehouse extends Model
         return ['',''];
     }
 
-    public function getNhaCungCapOptions($value, $data) {
-        $product = isset($data->product) ? $data->product : null;
-        if ($product != null) {
-            return Product::where('ma_so', $product)->lists('nha_cung_cap', 'nha_cung_cap');
-        }
+    // public function getNhaCungCapOptions($value, $data) {
+    //     $product = isset($data->product) ? $data->product : null;
+    //     if ($product != null) {
+    //         return Product::where('ma_so', $product)->lists('nha_cung_cap', 'nha_cung_cap');
+    //     }
         
-        return ['',''];
-    }
+    //     return ['',''];
+    // }
 
     public function getDonViTinhOptions($value, $data) {
         $product = isset($data->product) ? $data->product : null;
@@ -159,12 +159,12 @@ class Warehouse extends Model
         return ['',''];
     }
 
-    public function getDonGiaOptions($value, $data) {
-        $product = isset($data->product) ? $data->product : null;
-        if ($product != null) {
-            return Product::where('ma_so', $product)->lists('don_gia', 'don_gia');
-        }
+    // public function getDonGiaOptions($value, $data) {
+    //     $product = isset($data->product) ? $data->product : null;
+    //     if ($product != null) {
+    //         return Product::where('ma_so', $product)->lists('don_gia', 'don_gia');
+    //     }
         
-        return ['',''];
-    }
+    //     return ['',''];
+    // }
 }

@@ -2,23 +2,12 @@ fields:
     ma_so:
         label: 'Mã số'
         span: auto
-        context:
-            - update
-            - preview
         type: text
     ten_nhan_hieu:
         label: 'Tên nhãn hiệu, quy cách vật tư, dụng cụ & hàng hóa'
-        span: auto
-        type: text
-    nha_cung_cap:
-        label: 'Nhà cung cấp'
         span: auto
         type: text
     don_vi_tinh:
         label: 'Đơn vị tính'
         span: auto
         type: text
-    don_gia:
-        label: 'Đơn giá'
-        span: auto
-        type: number

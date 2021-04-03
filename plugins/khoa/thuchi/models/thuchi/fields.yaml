@@ -49,12 +49,14 @@ fields:
         type: dropdown
     type:
         label: 'Loại phiếu'
-        span: auto
-        showSearch: true
         options:
             - Thu
             - Chi
+        showSearch: true
+        span: auto
         placeholder: '-- Chọn loại phiếu --'
+        context:
+            - create
         type: dropdown
     ly_do:
         label: 'Lý do'

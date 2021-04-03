@@ -14,6 +14,7 @@ columns:
         label: nha_cung_cap
         type: text
         searchable: true
+        invisible: true
     don_vi_tinh:
         label: don_vi_tinh
         type: text

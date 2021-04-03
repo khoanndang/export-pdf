@@ -21,16 +21,16 @@ class Product extends Model
     public $rules = [
         'ten_nhan_hieu' => 'required',
         'don_vi_tinh' => 'required',
-        'don_gia' => 'required',
+        // 'don_gia' => 'required',
     ];
 
     public function beforeCreate() {
         //create order record
-        $ma_so = $this->quickRandom(6); //generate tracking number
-        do {
-            $ma_so = $this->quickRandom(6); //generate tracking number
-        } while (Product::where('ma_so',$ma_so)->count() > 0);
-        $this->ma_so = $ma_so;
+        // $ma_so = $this->quickRandom(6); //generate tracking number
+        // do {
+        //     $ma_so = $this->quickRandom(6); //generate tracking number
+        // } while (Product::where('ma_so',$ma_so)->count() > 0);
+        // $this->ma_so = $ma_so;
     }
 
     public function quickRandom($length = 16)
