@@ -99,6 +99,7 @@ tabs:
                     thanh_tien:
                         label: 'Thành tiền'
                         span: auto
+                        readOnly: 1
                         type: text
         json_data_xuat:
             label: 'Thông tin xuất'
@@ -141,6 +142,7 @@ tabs:
                     thanh_tien:
                         label: 'Thành tiền'
                         span: auto
+                        readOnly: 1
                         type: text
                     ly_do_xuat_khau:
                         label: 'Lý do xuất khẩu'
