@@ -9,3 +9,18 @@ navigation:
         label: 'Sản phẩm'
         url: khoa/product/product
         icon: icon-list-alt
+        permissions:
+            - view_product
+permissions:
+    view_product:
+        tab: Product
+        label: 'View Product'
+    create_product:
+        tab: Product
+        label: 'Create Product'
+    update_product:
+        tab: Product
+        label: 'Update Product'
+    delete_product:
+        tab: Product
+        label: 'Delete Product'

@@ -9,16 +9,61 @@ navigation:
         label: 'Niên khóa / Nhóm ngành'
         url: khoa/certificates/nienkhoa
         icon: icon-life-ring
+        permissions:
+            - view_nien_khoa
         sideMenu:
             side-menu-item:
                 label: 'Niên Khóa'
                 url: khoa/certificates/nienkhoa
                 icon: icon-sitemap
+                permissions:
+                    - view_nien_khoa
             side-menu-item2:
                 label: 'Nhóm ngành'
                 url: khoa/certificates/nhomnganh
                 icon: icon-sitemap
+                permissions:
+                    - view_nhom_nganh
     main-menu-item2:
         label: 'Thực tập sinh'
         url: khoa/certificates/student
         icon: icon-user
+        permissions:
+            - view_thuc_tap_sinh
+permissions:
+    view_thuc_tap_sinh:
+        tab: 'Thực tập sinh'
+        label: 'View Thực tập sinh'
+    create_thuc_tap_sinh:
+        tab: 'Thực tập sinh'
+        label: 'Create Thực tập sinh'
+    update_thuc_tap_sinh:
+        tab: 'Thực tập sinh'
+        label: 'Update Thực tập sinh'
+    delete_thuc_tap_sinh:
+        tab: 'Thực tập sinh'
+        label: 'Delete Thực tập sinh'
+    view_nien_khoa:
+        tab: 'Niên khóa'
+        label: 'View Niên khóa'
+    create_nien_khoa:
+        tab: 'Niên khóa'
+        label: 'Create Niên khóa'
+    update_nien_khoa:
+        tab: 'Niên khóa'
+        label: 'Update Niên khóa'
+    delete_nien_khoa:
+        tab: 'Niên khóa'
+        label: 'Delete Niên khóa'
+    view_nhom_nganh:
+        tab: 'Nhóm ngành'
+        label: 'View Nhóm ngành'
+    create_nhom_nganh:
+        tab: 'Nhóm ngành'
+        label: 'Create Nhóm ngành'
+    update_nhom_nganh:
+        tab: 'Nhóm ngành'
+        label: 'Update Nhóm ngành'
+    delete_nhom_nganh:
+        tab: 'Nhóm ngành'
+        label: 'Delete Nhóm ngành'

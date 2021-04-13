@@ -9,3 +9,18 @@ navigation:
         label: 'Xuất nhập kho'
         url: khoa/warehouse/warehouse
         icon: icon-book
+        permissions:
+            - view_warehouse
+permissions:
+    view_warehouse:
+        tab: Warehouse
+        label: 'View Warehouse'
+    create_warehouse:
+        tab: Warehouse
+        label: 'Create Warehouse'
+    update_warehouse:
+        tab: Warehouse
+        label: 'Update Warehouse'
+    delete_warehouse:
+        tab: Warehouse
+        label: 'Delete Warehouse'

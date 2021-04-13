@@ -9,3 +9,18 @@ navigation:
         label: 'Thu - Chi'
         url: khoa/thuchi/thuchi
         icon: icon-money
+        permissions:
+            - view_thu_chi
+permissions:
+    view_thu_chi:
+        tab: 'Thu chi'
+        label: 'View Thu chi'
+    create_thu_chi:
+        tab: 'Thu chi'
+        label: 'Create Thu chi'
+    update_thu_chi:
+        tab: 'Thu chi'
+        label: 'Update Thu chi'
+    delete_thu_chi:
+        tab: 'Thu chi'
+        label: 'Delete Thu chi'
